@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
+		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
+		9CAF451A24FEB9310018D8AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* ViewController.swift */; };
+		9CAF451D24FEB9310018D8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451B24FEB9310018D8AB /* Main.storyboard */; };
+		9CAF451F24FEB9320018D8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451E24FEB9320018D8AB /* Assets.xcassets */; };
+		9CAF452224FEB9320018D8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */; };
+		9CAF452D24FEB9320018D8AB /* FindMyRoute_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF452C24FEB9320018D8AB /* FindMyRoute_DemoTests.swift */; };
+		9CAF453824FEB9320018D8AB /* FindMyRoute_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF453724FEB9320018D8AB /* FindMyRoute_DemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CAF452924FEB9320018D8AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CAF450A24FEB9310018D8AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CAF451124FEB9310018D8AB;
+			remoteInfo = "FindMyRoute-Demo";
+		};
+		9CAF453424FEB9320018D8AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CAF450A24FEB9310018D8AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CAF451124FEB9310018D8AB;
+			remoteInfo = "FindMyRoute-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9CAF451924FEB9310018D8AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CAF451C24FEB9310018D8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CAF451E24FEB9320018D8AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CAF452124FEB9320018D8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CAF452324FEB9320018D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CAF452824FEB9320018D8AB /* FindMyRoute-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FindMyRoute-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CAF452C24FEB9320018D8AB /* FindMyRoute_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyRoute_DemoTests.swift; sourceTree = "<group>"; };
+		9CAF452E24FEB9320018D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CAF453324FEB9320018D8AB /* FindMyRoute-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FindMyRoute-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CAF453724FEB9320018D8AB /* FindMyRoute_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyRoute_DemoUITests.swift; sourceTree = "<group>"; };
+		9CAF453924FEB9320018D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CAF450F24FEB9310018D8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF452524FEB9320018D8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF453024FEB9320018D8AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CAF450924FEB9310018D8AB = {
+			isa = PBXGroup;
+			children = (
+				9CAF451424FEB9310018D8AB /* FindMyRoute-Demo */,
+				9CAF452B24FEB9320018D8AB /* FindMyRoute-DemoTests */,
+				9CAF453624FEB9320018D8AB /* FindMyRoute-DemoUITests */,
+				9CAF451324FEB9310018D8AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9CAF451324FEB9310018D8AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */,
+				9CAF452824FEB9320018D8AB /* FindMyRoute-DemoTests.xctest */,
+				9CAF453324FEB9320018D8AB /* FindMyRoute-DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CAF451424FEB9310018D8AB /* FindMyRoute-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				9CAF451524FEB9310018D8AB /* AppDelegate.swift */,
+				9CAF451724FEB9310018D8AB /* SceneDelegate.swift */,
+				9CAF451924FEB9310018D8AB /* ViewController.swift */,
+				9CAF451B24FEB9310018D8AB /* Main.storyboard */,
+				9CAF451E24FEB9320018D8AB /* Assets.xcassets */,
+				9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */,
+				9CAF452324FEB9320018D8AB /* Info.plist */,
+			);
+			path = "FindMyRoute-Demo";
+			sourceTree = "<group>";
+		};
+		9CAF452B24FEB9320018D8AB /* FindMyRoute-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CAF452C24FEB9320018D8AB /* FindMyRoute_DemoTests.swift */,
+				9CAF452E24FEB9320018D8AB /* Info.plist */,
+			);
+			path = "FindMyRoute-DemoTests";
+			sourceTree = "<group>";
+		};
+		9CAF453624FEB9320018D8AB /* FindMyRoute-DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CAF453724FEB9320018D8AB /* FindMyRoute_DemoUITests.swift */,
+				9CAF453924FEB9320018D8AB /* Info.plist */,
+			);
+			path = "FindMyRoute-DemoUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CAF451124FEB9310018D8AB /* FindMyRoute-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAF453C24FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-Demo" */;
+			buildPhases = (
+				9CAF450E24FEB9310018D8AB /* Sources */,
+				9CAF450F24FEB9310018D8AB /* Frameworks */,
+				9CAF451024FEB9310018D8AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FindMyRoute-Demo";
+			productName = "FindMyRoute-Demo";
+			productReference = 9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CAF452724FEB9320018D8AB /* FindMyRoute-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAF453F24FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-DemoTests" */;
+			buildPhases = (
+				9CAF452424FEB9320018D8AB /* Sources */,
+				9CAF452524FEB9320018D8AB /* Frameworks */,
+				9CAF452624FEB9320018D8AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CAF452A24FEB9320018D8AB /* PBXTargetDependency */,
+			);
+			name = "FindMyRoute-DemoTests";
+			productName = "FindMyRoute-DemoTests";
+			productReference = 9CAF452824FEB9320018D8AB /* FindMyRoute-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CAF453224FEB9320018D8AB /* FindMyRoute-DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CAF454224FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-DemoUITests" */;
+			buildPhases = (
+				9CAF452F24FEB9320018D8AB /* Sources */,
+				9CAF453024FEB9320018D8AB /* Frameworks */,
+				9CAF453124FEB9320018D8AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CAF453524FEB9320018D8AB /* PBXTargetDependency */,
+			);
+			name = "FindMyRoute-DemoUITests";
+			productName = "FindMyRoute-DemoUITests";
+			productReference = 9CAF453324FEB9320018D8AB /* FindMyRoute-DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CAF450A24FEB9310018D8AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Saul Moreno Abril";
+				TargetAttributes = {
+					9CAF451124FEB9310018D8AB = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					9CAF452724FEB9320018D8AB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9CAF451124FEB9310018D8AB;
+					};
+					9CAF453224FEB9320018D8AB = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9CAF451124FEB9310018D8AB;
+					};
+				};
+			};
+			buildConfigurationList = 9CAF450D24FEB9310018D8AB /* Build configuration list for PBXProject "FindMyRoute-Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CAF450924FEB9310018D8AB;
+			productRefGroup = 9CAF451324FEB9310018D8AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CAF451124FEB9310018D8AB /* FindMyRoute-Demo */,
+				9CAF452724FEB9320018D8AB /* FindMyRoute-DemoTests */,
+				9CAF453224FEB9320018D8AB /* FindMyRoute-DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CAF451024FEB9310018D8AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAF452224FEB9320018D8AB /* LaunchScreen.storyboard in Resources */,
+				9CAF451F24FEB9320018D8AB /* Assets.xcassets in Resources */,
+				9CAF451D24FEB9310018D8AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF452624FEB9320018D8AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF453124FEB9320018D8AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CAF450E24FEB9310018D8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAF451A24FEB9310018D8AB /* ViewController.swift in Sources */,
+				9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */,
+				9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF452424FEB9320018D8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAF452D24FEB9320018D8AB /* FindMyRoute_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CAF452F24FEB9320018D8AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CAF453824FEB9320018D8AB /* FindMyRoute_DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CAF452A24FEB9320018D8AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CAF451124FEB9310018D8AB /* FindMyRoute-Demo */;
+			targetProxy = 9CAF452924FEB9320018D8AB /* PBXContainerItemProxy */;
+		};
+		9CAF453524FEB9320018D8AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CAF451124FEB9310018D8AB /* FindMyRoute-Demo */;
+			targetProxy = 9CAF453424FEB9320018D8AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CAF451B24FEB9310018D8AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CAF451C24FEB9310018D8AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CAF452124FEB9320018D8AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CAF453A24FEB9320018D8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CAF453B24FEB9320018D8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CAF453D24FEB9320018D8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CAF453E24FEB9320018D8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CAF454024FEB9320018D8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-DemoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyRoute-Demo.app/FindMyRoute-Demo";
+			};
+			name = Debug;
+		};
+		9CAF454124FEB9320018D8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-DemoTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindMyRoute-Demo.app/FindMyRoute-Demo";
+			};
+			name = Release;
+		};
+		9CAF454324FEB9320018D8AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FindMyRoute-Demo";
+			};
+			name = Debug;
+		};
+		9CAF454424FEB9320018D8AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U96GUE2A6L;
+				INFOPLIST_FILE = "FindMyRoute-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saulmorenoabril.FindMyRoute-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FindMyRoute-Demo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CAF450D24FEB9310018D8AB /* Build configuration list for PBXProject "FindMyRoute-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAF453A24FEB9320018D8AB /* Debug */,
+				9CAF453B24FEB9320018D8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CAF453C24FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAF453D24FEB9320018D8AB /* Debug */,
+				9CAF453E24FEB9320018D8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CAF453F24FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAF454024FEB9320018D8AB /* Debug */,
+				9CAF454124FEB9320018D8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CAF454224FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CAF454324FEB9320018D8AB /* Debug */,
+				9CAF454424FEB9320018D8AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CAF450A24FEB9310018D8AB /* Project object */;
+}
