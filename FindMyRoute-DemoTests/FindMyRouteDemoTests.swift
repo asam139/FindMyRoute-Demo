@@ -1,5 +1,5 @@
 //
-//  FindMyRoute_DemoTests.swift
+//  FindMyRouteDemoTests.swift
 //  FindMyRoute-DemoTests
 //
 //  Created by Saul Moreno Abril on 1/9/20.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import FindMyRoute_Demo
 
-class FindMyRoute_DemoTests: XCTestCase {
+class FindMyRouteDemoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
