@@ -24,7 +24,7 @@ target 'FindMyRoute-Demo' do
 
 
   target 'FindMyRoute-DemoTests' do
-    inherit! :search_paths
+    inherit! :none
 
     # Rx
     pod 'RxBlocking', '~> 5.0'
@@ -32,7 +32,7 @@ target 'FindMyRoute-Demo' do
   end
 
   target 'FindMyRoute-DemoUITests' do
-    # Pods for testing
+    inherit! :none
   end
 
 end

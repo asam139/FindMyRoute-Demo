@@ -1,0 +1,23 @@
+//
+//  Production.xcconfig
+//  FindMyRoute-Demo
+//
+//  Created by Saul Moreno Abril on 1/9/20.
+//  Copyright © 2020 Saul Moreno Abril. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-FindMyRoute-Demo/Pods-FindMyRoute-Demo.release.xcconfig"
+#include "Pods/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests.release.xcconfig"
+#include "Pods/Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"
+
+// Server URL
+SERVER_BASE_URL = https:/$()/<myDomain>/
+
+// Google
+GOOGLE_MAPS_API_KEY = AIzaSyA6g-8ORnXzpTTwT9wncgRd4z6H9lszxkM
+
+// App Settings
+APP_NAME = Find My Route
