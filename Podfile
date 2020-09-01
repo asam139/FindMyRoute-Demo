@@ -12,7 +12,11 @@ target 'FindMyRoute-Demo' do
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
 
-  # Utils
+  # UI
+  pod 'RxGoogleMaps', '~> 4.0'
+
+  # Code quality
+  pod 'SnapKit', '~> 5.0'
   pod 'SwifterSwift', '~> 5.0'  # https://github.com/SwifterSwift/SwifterSwift
 
   # Tools
