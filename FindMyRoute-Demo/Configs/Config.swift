@@ -17,8 +17,11 @@ enum Config {
         return dict
     }()
 
-    static let serverBaseURL: String = {
-        guard let url = Config.infoDictionary["SERVER_BASE_URL"] as? String else {
+    static let meepBaseURL: URL = {
+        guard let urlString = Config.infoDictionary["MEEP_BASE_URL"] as? String else {
+            fatalError("Root URL not set in plist for this environment")
+        }
+        guard let url = URL(string: urlString) else {
             fatalError("Root URL not set in plist for this environment")
         }
         return url

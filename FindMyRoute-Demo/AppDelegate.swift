@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import CocoaLumberjack
 import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    static var shared: AppDelegate? {
+        return UIApplication.shared.delegate as? AppDelegate
+    }
+
+    var provider: MainApi?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // Google
-        GMSServices.provideAPIKey(Config.googleMapsApiKey)
+        setup()
 
         return true
     }
@@ -32,6 +37,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
+    // Setups
+
+    func setup() {
+        provider = RestApi(meepProvider: MeepNetworking.defaultNetworking())
+        setupGoogleMaps()
+        setupCocoaLumberjack()
+    }
+
+    func setupGoogleMaps() {
+        GMSServices.provideAPIKey(Config.googleMapsApiKey)
+    }
+
+    func setupCocoaLumberjack() {
+        DDLog.add(DDOSLogger.sharedInstance)
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = TimeInterval(60*60*24)  // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
     }
 
 }

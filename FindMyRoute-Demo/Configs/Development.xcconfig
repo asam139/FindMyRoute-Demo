@@ -13,8 +13,8 @@
 #include "Pods/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests.debug.xcconfig"
 #include "Pods/Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.debug.xcconfig"
 
-// Server URL
-SERVER_BASE_URL = https:/$()/<myDomain>/
+// Base URL
+MEEP_BASE_URL = https:/$()/apidev.meep.me/tripplan/api/v1/
 
 // Google
 GOOGLE_MAPS_API_KEY = AIzaSyA6g-8ORnXzpTTwT9wncgRd4z6H9lszxkM

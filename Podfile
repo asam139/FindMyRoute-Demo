@@ -11,17 +11,20 @@ target 'FindMyRoute-Demo' do
   # Rx
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
+  pod 'RxSwiftExt', '~> 5.0'
 
   # UI
   pod 'RxGoogleMaps', '~> 4.0'
 
   # Code quality
   pod 'SnapKit', '~> 5.0'
-  pod 'SwifterSwift', '~> 5.0'  # https://github.com/SwifterSwift/SwifterSwift
+  pod 'SwifterSwift', '~> 5.0'
 
   # Tools
   pod 'SwiftLint', '0.40.0'
 
+  # Logging
+  pod 'CocoaLumberjack/Swift', '~> 3.0'
 
   target 'FindMyRoute-DemoTests' do
     inherit! :none
