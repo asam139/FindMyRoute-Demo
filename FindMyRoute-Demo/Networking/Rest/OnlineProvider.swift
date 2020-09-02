@@ -35,6 +35,6 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
             .flatMap { _ in // Turn the online state into a network request
                 // TODO: Filter successful requests to manage errors, connection...
                 return actualRequest
-        }
+            }
     }
 }

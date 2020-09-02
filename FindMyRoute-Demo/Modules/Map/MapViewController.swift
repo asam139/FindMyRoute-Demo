@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 import GoogleMaps
 import RxGoogleMaps
 import RxCocoa
@@ -37,8 +38,9 @@ class MapViewController: UIViewController {
     }
 
     func makeUI() {
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        let mapView = GMSMapView(frame: self.view.frame)
+        mapView.isMyLocationEnabled = true
+
         self.view.addSubview(mapView)
         mapView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
@@ -52,6 +54,10 @@ class MapViewController: UIViewController {
         let input = MapViewModel.Input()
         let output = viewModel.transform(input: input)
 
+        self.mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
+            self?.updateCameraPosition(location: location, animate: false)
+        }).disposed(by: rx.disposeBag)
+
         self.mapView.rx.didChange.asDriver()
             .drive(onNext: { print("Did change position: \($0)") })
             .disposed(by: rx.disposeBag)
@@ -59,6 +65,15 @@ class MapViewController: UIViewController {
         output.items.asDriver(onErrorJustReturn: []).drive(onNext: { [weak self] (resources) in
             self?.updateResources(resources)
         }).disposed(by: rx.disposeBag)
+    }
+
+    func updateCameraPosition(location: CLLocation, animate: Bool = true) {
+        let camera = GMSCameraPosition(target: location.coordinate, zoom: self.mapView.camera.zoom)
+        if animate {
+            self.mapView.animate(to: camera)
+        } else {
+            self.mapView.camera = camera
+        }
     }
 
     func updateResources(_ resources: [Resource]) {

@@ -13,7 +13,7 @@
 		9C2E5F3024FECEA1007145BB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2E5F2F24FECEA1007145BB /* Config.swift */; };
 		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
 		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
-		9CAF451A24FEB9310018D8AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* ViewController.swift */; };
+		9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* MapViewController.swift */; };
 		9CAF451D24FEB9310018D8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451B24FEB9310018D8AB /* Main.storyboard */; };
 		9CAF451F24FEB9320018D8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451E24FEB9320018D8AB /* Assets.xcassets */; };
 		9CAF452224FEB9320018D8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */; };
@@ -64,7 +64,7 @@
 		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9CAF451924FEB9310018D8AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CAF451924FEB9310018D8AB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9CAF451C24FEB9310018D8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CAF451E24FEB9320018D8AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CAF452124FEB9320018D8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -250,8 +250,8 @@
 		9CBE3A3225000F4600546C63 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9CBE3A3325000F4E00546C63 /* Map */,
 				9CBE3A3625000F8700546C63 /* ViewModelType.swift */,
+				9CBE3A3325000F4E00546C63 /* Map */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -260,7 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				9CBE3A3425000F5A00546C63 /* MapViewModel.swift */,
-				9CAF451924FEB9310018D8AB /* ViewController.swift */,
+				9CAF451924FEB9310018D8AB /* MapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBE3A2A24FFFDC400546C63 /* OnlineProvider.swift in Sources */,
-				9CAF451A24FEB9310018D8AB /* ViewController.swift in Sources */,
+				9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */,
 				9CBE3A2F2500031000546C63 /* Log.swift in Sources */,
 				9CBE3A2324FFF4D400546C63 /* MeepApi.swift in Sources */,
 				9CBE3A3525000F5A00546C63 /* MapViewModel.swift in Sources */,
@@ -732,7 +732,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				INFOPLIST_FILE = "FindMyRoute-Demo/Info.plist";
@@ -753,7 +753,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				INFOPLIST_FILE = "FindMyRoute-Demo/Info.plist";
