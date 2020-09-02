@@ -27,6 +27,8 @@
 		9CBE3A2D24FFFFB200546C63 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2C24FFFFB200546C63 /* Reachability.swift */; };
 		9CBE3A2F2500031000546C63 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2E2500031000546C63 /* Log.swift */; };
 		9CBE3A312500077500546C63 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A302500077500546C63 /* RestApi.swift */; };
+		9CBE3A3525000F5A00546C63 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A3425000F5A00546C63 /* MapViewModel.swift */; };
+		9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A3625000F8700546C63 /* ViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		9CBE3A2C24FFFFB200546C63 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		9CBE3A2E2500031000546C63 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9CBE3A302500077500546C63 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
+		9CBE3A3425000F5A00546C63 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		9CBE3A3625000F8700546C63 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E257BE8A8612743C880913A1 /* Pods-FindMyRoute-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyRoute-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,9 +181,9 @@
 				9CBE3A2B24FFFF7700546C63 /* Manager */,
 				9CBE3A1E24FFEF0D00546C63 /* Networking */,
 				9CBE3A2424FFFB3100546C63 /* Models */,
+				9CBE3A3225000F4600546C63 /* Modules */,
 				9CAF451524FEB9310018D8AB /* AppDelegate.swift */,
 				9CAF451724FEB9310018D8AB /* SceneDelegate.swift */,
-				9CAF451924FEB9310018D8AB /* ViewController.swift */,
 				9CAF451B24FEB9310018D8AB /* Main.storyboard */,
 				9CAF451E24FEB9320018D8AB /* Assets.xcassets */,
 				9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */,
@@ -241,6 +245,24 @@
 				9CBE3A2E2500031000546C63 /* Log.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		9CBE3A3225000F4600546C63 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9CBE3A3325000F4E00546C63 /* Map */,
+				9CBE3A3625000F8700546C63 /* ViewModelType.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9CBE3A3325000F4E00546C63 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9CBE3A3425000F5A00546C63 /* MapViewModel.swift */,
+				9CAF451924FEB9310018D8AB /* ViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,7 +545,9 @@
 				9CAF451A24FEB9310018D8AB /* ViewController.swift in Sources */,
 				9CBE3A2F2500031000546C63 /* Log.swift in Sources */,
 				9CBE3A2324FFF4D400546C63 /* MeepApi.swift in Sources */,
+				9CBE3A3525000F5A00546C63 /* MapViewModel.swift in Sources */,
 				9C2E5F3024FECEA1007145BB /* Config.swift in Sources */,
+				9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */,
 				9CBE3A2824FFFCD500546C63 /* Networking.swift in Sources */,
 				9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */,
 				9CBE3A2024FFF13E00546C63 /* Api.swift in Sources */,

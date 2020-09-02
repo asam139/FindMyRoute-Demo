@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 class Resource: Codable {
     var id: String
@@ -19,4 +20,8 @@ class Resource: Codable {
     var y: Float
     var lat: Float
     var lon: Float
+
+    var position: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: Double(lat), longitude: Double(lon))
+    }
 }

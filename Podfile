@@ -9,9 +9,12 @@ target 'FindMyRoute-Demo' do
   pod 'Moya/RxSwift', '~> 14.0'
 
   # Rx
+  # https://github.com/LeoMobileDeveloper/awesome-rxswift
   pod 'RxSwift', '~> 5.0'
   pod 'RxCocoa', '~> 5.0'
   pod 'RxSwiftExt', '~> 5.0'
+  pod 'NSObject+Rx', '~> 5.0'
+  pod 'RxOptional', '~> 4.0'
 
   # UI
   pod 'RxGoogleMaps', '~> 4.0'

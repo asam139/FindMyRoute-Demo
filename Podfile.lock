@@ -13,6 +13,8 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -20,6 +22,9 @@ PODS:
     - RxSwift (~> 5)
   - RxGoogleMaps (4.0.0):
     - GoogleMaps (~> 3)
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxOptional (4.1.0):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
@@ -66,9 +71,11 @@ PODS:
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.0)
   - Moya/RxSwift (~> 14.0)
+  - "NSObject+Rx (~> 5.0)"
   - RxBlocking (~> 5.0)
   - RxCocoa (~> 5.0)
   - RxGoogleMaps (~> 4.0)
+  - RxOptional (~> 4.0)
   - RxSwift (~> 5.0)
   - RxSwiftExt (~> 5.0)
   - RxTest (~> 5.0)
@@ -82,9 +89,11 @@ SPEC REPOS:
     - CocoaLumberjack
     - GoogleMaps
     - Moya
+    - "NSObject+Rx"
     - RxBlocking
     - RxCocoa
     - RxGoogleMaps
+    - RxOptional
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -98,9 +107,11 @@ SPEC CHECKSUMS:
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxGoogleMaps: 5d8a91a26dc9e3f703c5be09424e3ecf7f607328
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
@@ -109,6 +120,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 8c2c90dff2c193ba7308ed21f61e5bf5e026739a
+PODFILE CHECKSUM: 051130faae5aaa0028fcae4c0530a316d1a04ec1
 
 COCOAPODS: 1.9.3
