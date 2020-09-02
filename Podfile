@@ -15,6 +15,7 @@ target 'FindMyRoute-Demo' do
   pod 'RxSwiftExt', '~> 5.0'
   pod 'NSObject+Rx', '~> 5.0'
   pod 'RxOptional', '~> 4.0'
+  pod 'RxCoreLocation', '~> 1.5'
 
   # UI
   pod 'RxGoogleMaps', '~> 4.0'
