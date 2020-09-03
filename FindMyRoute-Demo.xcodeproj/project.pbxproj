@@ -196,6 +196,7 @@
 				9CBE3A1E24FFEF0D00546C63 /* Networking */,
 				9CBE3A2424FFFB3100546C63 /* Models */,
 				9CBE3A3225000F4600546C63 /* Modules */,
+				9CF09060250176170075278D /* Extensions */,
 				9C00DD2E25016F1F00C2A5C5 /* Utils */,
 				9CAF451524FEB9310018D8AB /* AppDelegate.swift */,
 				9CAF451724FEB9310018D8AB /* SceneDelegate.swift */,
@@ -280,6 +281,13 @@
 				9CAF451924FEB9310018D8AB /* MapViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		9CF09060250176170075278D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

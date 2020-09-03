@@ -62,6 +62,10 @@ class MapViewController: UIViewController {
         //            self?.updateCameraPosition(coordinate: location.coordinate, animate: false)
         //        }).disposed(by: rx.disposeBag)
 
+        mapView.rx.idleAt.bind(onNext: { [weak self](_) in
+            self?.refreshResources()
+        }).disposed(by: rx.disposeBag)
+
         output.city.asDriver().drive(onNext: { [weak self] (city) in
             self?.fitCameraBounds(city.position)
         }).disposed(by: rx.disposeBag)
@@ -89,6 +93,12 @@ class MapViewController: UIViewController {
         } else {
             mapView.camera = camera
         }
+    }
+
+    func refreshResources() {
+        let region = mapView.projection.visibleRegion()
+
+        
     }
 
     func updateResources(_ resources: [Resource]) {
