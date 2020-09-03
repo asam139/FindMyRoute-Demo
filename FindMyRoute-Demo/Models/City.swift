@@ -8,25 +8,19 @@
 
 import Foundation
 
-class City: Codable {
+class City: Positioned {
     var id: String
     var key: String
     var name: String
 
     var x: Float
     var y: Float
-    var lat: Float
-    var lon: Float
 
-    init(id: String, key: String, name: String,
-         lat: Float, lon: Float,
-         x: Float? = nil, y: Float? = nil) {
-        self.id = id
+    init(id: String? = nil, key: String, name: String, x: Float, y: Float) {
+        self.id = id ?? UUID().uuidString
         self.key = key
         self.name = name
-        self.x = x ?? lat
-        self.y = y ?? lon
-        self.lat = lat
-        self.lon = lon
+        self.x = x
+        self.y = y
     }
 }

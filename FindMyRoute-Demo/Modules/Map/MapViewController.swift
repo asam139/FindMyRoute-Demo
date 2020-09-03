@@ -56,21 +56,26 @@ class MapViewController: UIViewController {
         let input = MapViewModel.Input(refresh: refresh)
         let output = viewModel.transform(input: input)
 
-        self.mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
-            self?.updateCameraPosition(location: location, animate: false)
-        }).disposed(by: rx.disposeBag)
+        //        mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
+        //            self?.updateCameraPosition(coordinate: location.coordinate, animate: false)
+        //        }).disposed(by: rx.disposeBag)
 
-        self.mapView.rx.didChange.asDriver()
+        mapView.rx.didChange.asDriver()
             .drive(onNext: { print("Did change position: \($0)") })
             .disposed(by: rx.disposeBag)
 
-        output.resources.asDriver(onErrorJustReturn: []).drive(onNext: { [weak self] (resources) in
+        output.city.asDriver().drive(onNext: { [weak self] (city) in
+            self?.updateCameraPosition(coordinate: city.position)
+        }).disposed(by: rx.disposeBag)
+
+        output.resources.asDriver().drive(onNext: { [weak self] (resources) in
             self?.updateResources(resources)
         }).disposed(by: rx.disposeBag)
     }
 
-    func updateCameraPosition(location: CLLocation, animate: Bool = true) {
-        let camera = GMSCameraPosition(target: location.coordinate, zoom: self.mapView.camera.zoom)
+    func updateCameraPosition(coordinate: CLLocationCoordinate2D, zoom: Float? = nil, animate: Bool = true) {
+
+        let camera = GMSCameraPosition(target: coordinate, zoom: zoom ?? mapView.camera.zoom)
         if animate {
             mapView.animate(to: camera)
         } else {

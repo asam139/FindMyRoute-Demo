@@ -34,5 +34,5 @@ enum Config {
         return apiKey
     }()
 
-    static let initialCity = City(id: "0", key: "lisboa", name: "Lisboa", lat: 38.71104, lon: -9.160096)
+    static let initialCity = City(id: "0", key: "lisboa", name: "Lisboa", x: -9.160096, y: 38.71104)
 }

@@ -7,21 +7,6 @@
 //
 
 import Foundation
-import MapKit
-
-protocol PositionedResource: Decodable {
-    var id: String { get }
-    var name: String { get }
-    var x: Float { get }
-    var y: Float { get }
-    var companyZoneId: Int64 { get }
-}
-
-extension PositionedResource {
-    var position: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: Double(y), longitude: Double(x))
-    }
-}
 
 enum Resource: Decodable, PositionedResource {
     case busStop(BusStop)
