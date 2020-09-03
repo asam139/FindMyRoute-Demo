@@ -20,8 +20,8 @@ class MapViewController: UIViewController {
     var viewModel: MapViewModel?
 
     @IBOutlet weak var mapView: GMSMapView!
-    let defaultRadius: Float = 250 // meters
-    let defaultPadding: Float = 50 // meters
+    let defaultRadius: CLLocationDistance = 250 // meters
+    let defaultPadding: CGFloat = 50 // meters
 
     init(viewModel: MapViewModel?) {
         self.viewModel = viewModel
@@ -72,7 +72,7 @@ class MapViewController: UIViewController {
     }
 
     func fitCameraBounds(_ coordinate: CLLocationCoordinate2D, animate: Bool = true) {
-        let range = MapUtils.translateCoordinate(coordinate: coordinate, latMeters: Double(defaultRadius * 2), lonMeters: Double(defaultRadius * 2))
+        let range = MapUtils.translateCoordinate(coordinate: coordinate, latMeters: defaultRadius * 2, lonMeters: defaultRadius * 2)
         let bounds = GMSCoordinateBounds(coordinate: coordinate, coordinate: range)
         let update = GMSCameraUpdate.fit(bounds, withPadding: defaultPadding)
         if animate {
