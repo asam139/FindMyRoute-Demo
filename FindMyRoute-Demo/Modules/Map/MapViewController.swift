@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 import GoogleMaps
-import RxGoogleMaps
+import RxSwift
 import RxCocoa
+import RxGoogleMaps
 import SnapKit
 import NSObject_Rx
 
@@ -51,7 +52,8 @@ class MapViewController: UIViewController {
     func bindViewModel() {
         guard let viewModel = viewModel else { return }
 
-        let input = MapViewModel.Input()
+        let refresh = Observable.of(Observable.just(())).merge()
+        let input = MapViewModel.Input(refresh: refresh)
         let output = viewModel.transform(input: input)
 
         self.mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
@@ -62,7 +64,7 @@ class MapViewController: UIViewController {
             .drive(onNext: { print("Did change position: \($0)") })
             .disposed(by: rx.disposeBag)
 
-        output.items.asDriver(onErrorJustReturn: []).drive(onNext: { [weak self] (resources) in
+        output.resources.asDriver(onErrorJustReturn: []).drive(onNext: { [weak self] (resources) in
             self?.updateResources(resources)
         }).disposed(by: rx.disposeBag)
     }
@@ -70,9 +72,9 @@ class MapViewController: UIViewController {
     func updateCameraPosition(location: CLLocation, animate: Bool = true) {
         let camera = GMSCameraPosition(target: location.coordinate, zoom: self.mapView.camera.zoom)
         if animate {
-            self.mapView.animate(to: camera)
+            mapView.animate(to: camera)
         } else {
-            self.mapView.camera = camera
+            mapView.camera = camera
         }
     }
 

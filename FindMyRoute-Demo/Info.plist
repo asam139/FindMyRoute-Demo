@@ -60,11 +60,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Access to your location is necessary to show your position on the map.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Access to your location is necessary to show your position on the map.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Access to your location is necessary to show your position on the map.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Access to your location is necessary to show your position on the map.</string>
 	<key>GOOGLE_MAPS_API_KEY</key>
 	<string>${GOOGLE_MAPS_API_KEY}</string>
+	<key>MEEP_BASE_URL</key>
+	<string>${MEEP_BASE_URL}</string>
 </dict>
 </plist>

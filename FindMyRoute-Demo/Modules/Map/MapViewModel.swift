@@ -13,20 +13,28 @@ import RxCocoa
 class MapViewModel: ViewModel, ViewModelType {
 
     struct Input {
+        let refresh: Observable<Void>
     }
 
     struct Output {
-        let items: BehaviorRelay<[Resource]>
+        let city: BehaviorRelay<City>
+        let resources: BehaviorRelay<[Resource]>
     }
 
     func transform(input: Input) -> Output {
+        let city = BehaviorRelay<City>(value: Config.initialCity)
+        let resources = BehaviorRelay<[Resource]>(value: [])
 
-        let elements = BehaviorRelay<[Resource]>(value: [])
+        input.refresh.flatMap { () -> Observable<[Resource]> in
+            return self.request(city: city.value)
+        }.subscribe(onNext: { (items) in
+            resources.accept(items)
+        }).disposed(by: rx.disposeBag)
 
-        return Output(items: elements)
+        return Output(city: city, resources: resources)
     }
 
-    func request() -> Observable<[Resource]> {
-        return provider.resources(city: "Lisboa").asObservable()
+    func request(city: City) -> Observable<[Resource]> {
+        return provider.resources(city: city.key).asObservable()
     }
 }

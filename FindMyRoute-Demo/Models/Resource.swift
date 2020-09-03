@@ -9,19 +9,232 @@
 import Foundation
 import MapKit
 
-class Resource: Codable {
-    var id: String
-    var name: String
-    var scheduledArrival: Int64
-    var locationType: Int64
-    var companyZoneId: Int64
+protocol PositionedResource: Decodable {
+    var id: String { get }
+    var name: String { get }
+    var x: Float { get }
+    var y: Float { get }
+    var companyZoneId: Int64 { get }
+}
 
-    var x: Float
-    var y: Float
-    var lat: Float
-    var lon: Float
-
+extension PositionedResource {
     var position: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: Double(lat), longitude: Double(lon))
+        return CLLocationCoordinate2D(latitude: Double(y), longitude: Double(x))
     }
 }
+
+enum Resource: Decodable, PositionedResource {
+    case busStop(BusStop)
+    case bikeStop(BikeStop)
+    case electricCar(ElectricCar)
+    case moped(Moped)
+
+    private enum CodingKeys: String, CodingKey {
+        case scheduledArrival
+        case bikesAvailable
+        case resourceType
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        if let _ = try? container.decode(Int64.self, forKey: .scheduledArrival) {
+            self = .busStop(try BusStop(from: decoder))
+        } else if let _ = try? container.decode(Int64.self, forKey: .bikesAvailable) {
+            self = .bikeStop(try BikeStop(from: decoder))
+        } else if let resourceType = try? container.decode(String.self, forKey: .resourceType) {
+            switch resourceType {
+            case "ELECTRIC_CAR": self = .electricCar(try ElectricCar(from: decoder))
+            case "MOPED": self = .moped(try Moped(from: decoder))
+            default: fatalError("Unknown type")
+            }
+        } else {
+            fatalError("Unknown type")
+        }
+    }
+
+    var id: String {
+        switch self {
+        case .busStop(let r):
+            return r.id
+        case .bikeStop(let r):
+            return r.id
+        case .electricCar(let r):
+            return r.id
+        case .moped(let r):
+            return r.id
+        }
+    }
+
+    var name: String {
+        switch self {
+        case .busStop(let r):
+            return r.name
+        case .bikeStop(let r):
+            return r.name
+        case .electricCar(let r):
+            return r.name
+        case .moped(let r):
+            return r.name
+        }
+    }
+
+    var x: Float {
+        switch self {
+        case .busStop(let r):
+            return r.x
+        case .bikeStop(let r):
+            return r.x
+        case .electricCar(let r):
+            return r.x
+        case .moped(let r):
+            return r.x
+        }
+    }
+
+    var y: Float {
+        switch self {
+        case .busStop(let r):
+            return r.y
+        case .bikeStop(let r):
+            return r.y
+        case .electricCar(let r):
+            return r.y
+        case .moped(let r):
+            return r.y
+        }
+    }
+
+    var companyZoneId: Int64 {
+        switch self {
+        case .busStop(let r):
+            return r.companyZoneId
+        case .bikeStop(let r):
+            return r.companyZoneId
+        case .electricCar(let r):
+            return r.companyZoneId
+        case .moped(let r):
+            return r.companyZoneId
+        }
+    }
+}
+
+struct BusStop: PositionedResource {
+    var id: String
+    var name: String
+    var x: Float
+    var y: Float
+    var companyZoneId: Int64
+
+    var scheduledArrival: Int64
+    var locationType: Int64
+    var lat: Float
+    var lon: Float
+}
+
+struct BikeStop: PositionedResource {
+    var id: String
+    var name: String
+    var x: Float
+    var y: Float
+    var companyZoneId: Int64
+
+    var realTimeData: Bool
+    var station: Bool
+    var availableResources: Int
+    var spacesAvailable: Int
+    var allowDropoff: Bool
+
+    var bikesAvailable: Int
+}
+
+struct ElectricCar: PositionedResource {
+    var id: String
+    var name: String
+    var x: Float
+    var y: Float
+    var companyZoneId: Int64
+
+    var licencePlate: String
+    var range: Int
+    var batteryLevel: Int
+    var model: String
+    var resourceImageId: String
+    var realTimeData: Bool
+    var resourceType: String
+    var seats: Int
+}
+
+struct Moped: PositionedResource {
+    var id: String
+    var name: String
+    var x: Float
+    var y: Float
+    var companyZoneId: Int64
+
+    var licencePlate: String
+    var range: Int
+    var batteryLevel: Int
+    var model: String
+    var resourceImageId: String
+    var realTimeData: Bool
+    var resourceType: String
+
+    var helmets: Int
+}
+
+//  Type 1 Stop
+/*
+ id,
+ name,
+ x,
+ y,
+ companyZoneId
+ */
+
+// Type 1 Bus
+/*
+ {
+ locationType: 0,
+ companyZoneId: 382,
+ lat: 38.713912,
+ lon: -9.13802
+ }
+ */
+
+// Type 3
+/*
+ {
+
+ realTimeData: true,
+ station: true,
+ availableResources: 1,
+ spacesAvailable: 19,
+ allowDropoff: true,
+
+ bikesAvailable: 1
+ }
+ */
+
+// Vehicule
+/*
+ {
+
+ licencePlate: "173_32ZJ62",
+ range: 736,
+ batteryLevel: 92,
+ model: "null DS3",
+ resourceImageId: "vehicle_gen_emov",
+ realTimeData: true,
+
+
+ resourceType: "ELECTRIC_CAR",
+ seats: 5,
+ }
+ */
+
+/*
+ {
+ resourceType: "MOPED",
+ helmets: 2,
+ },
+ */
