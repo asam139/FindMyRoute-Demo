@@ -7,34 +7,40 @@
 //
 
 import Foundation
+import MapKit
 import RxSwift
 import RxCocoa
 
 class MapViewModel: ViewModel, ViewModelType {
 
     struct Input {
-        let refresh: Observable<Void>
+        let city: Driver<City>
+        let refresh: Observable<Region>
     }
 
     struct Output {
-        let city: BehaviorRelay<City>
-        let resources: BehaviorRelay<[Resource]>
+        let resources: Driver<[Resource]>
     }
 
     func transform(input: Input) -> Output {
-        let city = BehaviorRelay<City>(value: Config.initialCity)
         let resources = BehaviorRelay<[Resource]>(value: [])
 
-        input.refresh.flatMap { () -> Observable<[Resource]> in
-            return self.request(city: city.value)
-        }.subscribe(onNext: { (items) in
-            resources.accept(items)
-        }).disposed(by: rx.disposeBag)
+        let throttledRefresh = input.refresh.throttle(.milliseconds(250), scheduler: MainScheduler.instance)
 
-        return Output(city: city, resources: resources)
+        Observable.combineLatest(input.city.asObservable(), throttledRefresh)
+            .flatMap { (city, region) -> Observable<[Resource]> in
+                print("\(city) --- \(region)")
+                return self.request(city: city,
+                                    lowerLeftLatLon: region.lowerLeftLatLon,
+                                    upperRightLatLon: region.upperRightLatLon)
+                    .asDriver(onErrorJustReturn: []).asObservable()
+            }.subscribe(onNext: { (items) in
+                resources.accept(items)
+            }).disposed(by: rx.disposeBag)
+        return Output(resources: resources.asDriver())
     }
 
-    func request(city: City) -> Observable<[Resource]> {
-        return provider.resources(city: city.key).asObservable()
+    func request(city: City, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Observable<[Resource]> {
+        return provider.resources(cityKey: city.key, lowerLeftLatLon: lowerLeftLatLon, upperRightLatLon: upperRightLatLon).asObservable()
     }
 }

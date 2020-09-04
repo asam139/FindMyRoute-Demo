@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 import RxSwift
 import RxCocoa
 import Moya
@@ -21,8 +22,8 @@ class RestApi: MainApi {
         self.meepProvider = meepProvider
     }
 
-    func resources(city: String) -> Single<[Resource]> {
-        return request(.resources(city: city))
+    func resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Single<[Resource]> {
+        return request(.resources(cityKey: cityKey, lowerLeftLatLon: lowerLeftLatLon, upperRightLatLon: upperRightLatLon))
     }
 }
 

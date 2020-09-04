@@ -7,11 +7,12 @@
 //
 
 import Foundation
+import MapKit
 import RxSwift
 import RxCocoa
 
 protocol MainApi {
 
     // MARK: - Meep
-    func resources(city: String) -> Single<[Resource]>
+    func resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Single<[Resource]>
 }

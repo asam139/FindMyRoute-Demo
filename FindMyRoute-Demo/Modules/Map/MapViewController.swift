@@ -11,6 +11,7 @@ import MapKit
 import GoogleMaps
 import RxSwift
 import RxCocoa
+import RxRelay
 import RxGoogleMaps
 import SnapKit
 import NSObject_Rx
@@ -22,6 +23,12 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     let defaultRadius: CLLocationDistance = 250 // meters
     let defaultPadding: CGFloat = 50 // meters
+
+    // TODO: Create cities selector
+    lazy var city: Driver<City> = {
+        return BehaviorRelay(value: Config.initialCity).asDriver()
+    }()
+    let region = PublishSubject<Region>()
 
     init(viewModel: MapViewModel?) {
         self.viewModel = viewModel
@@ -54,23 +61,22 @@ class MapViewController: UIViewController {
     func bindViewModel() {
         guard let viewModel = viewModel else { return }
 
-        let refresh = Observable.of(Observable.just(())).merge()
-        let input = MapViewModel.Input(refresh: refresh)
+        let input = MapViewModel.Input(city: city, refresh: region.asObservable())
         let output = viewModel.transform(input: input)
 
-        //        mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
-        //            self?.updateCameraPosition(coordinate: location.coordinate, animate: false)
-        //        }).disposed(by: rx.disposeBag)
+        // mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
+        //     self?.updateCameraPosition(coordinate: location.coordinate, animate: false)
+        // }).disposed(by: rx.disposeBag)
 
         mapView.rx.idleAt.bind(onNext: { [weak self](_) in
             self?.refreshResources()
         }).disposed(by: rx.disposeBag)
 
-        output.city.asDriver().drive(onNext: { [weak self] (city) in
+        input.city.asDriver().drive(onNext: { [weak self] (city) in
             self?.fitCameraBounds(city.position)
         }).disposed(by: rx.disposeBag)
 
-        output.resources.asDriver().drive(onNext: { [weak self] (resources) in
+        output.resources.drive(onNext: { [weak self] (resources) in
             self?.updateResources(resources)
         }).disposed(by: rx.disposeBag)
     }
@@ -96,9 +102,8 @@ class MapViewController: UIViewController {
     }
 
     func refreshResources() {
-        let region = mapView.projection.visibleRegion()
-
-        
+        let visibleRegion = mapView.projection.visibleRegion()
+        region.onNext(Region(lowerLeftLatLon: visibleRegion.nearLeft, upperRightLatLon: visibleRegion.farRight))
     }
 
     func updateResources(_ resources: [Resource]) {

@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import MapKit
 import RxSwift
 import Moya
 import Alamofire
 
 enum MeepApi {
-    case resources(city: String)
+    case resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D)
 }
 
 extension MeepApi: TargetType {
@@ -25,7 +26,7 @@ extension MeepApi: TargetType {
 
     var path: String {
         switch self {
-        case .resources(let city): return "routers/\(city)/resources"
+        case .resources(let cityKey, _, _): return "routers/\(cityKey)/resources"
         }
     }
 
@@ -43,9 +44,9 @@ extension MeepApi: TargetType {
     var parameters: [String: Any]? {
         var params: [String: Any] = [:]
         switch self {
-        case .resources:
-            params["lowerLeftLatLon"] = "38.711046,-9.1600096"
-            params["upperRightLatLon"] = "38.739429,-9.137115"
+        case .resources(_ , let lowerLeftLatLon, let upperRightLatLon):
+            params["lowerLeftLatLon"] = lowerLeftLatLon.commaString
+            params["upperRightLatLon"] = upperRightLatLon.commaString
         }
         return params
     }
