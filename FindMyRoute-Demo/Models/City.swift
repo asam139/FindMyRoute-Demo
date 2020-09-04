@@ -16,6 +16,8 @@ class City: Positioned {
     var x: Float
     var y: Float
 
+    var snippet: String?
+
     init(id: String? = nil, key: String, name: String, x: Float, y: Float) {
         self.id = id ?? UUID().uuidString
         self.key = key

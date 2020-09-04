@@ -112,6 +112,7 @@ class MapViewController: UIViewController {
             let marker = GMSMarker()
             marker.position = resource.position
             marker.title = resource.name
+            marker.snippet = resource.snippet
             marker.icon = ImagesManager.shared.markerImage(forKey: String(resource.companyZoneId))
             marker.map = mapView
 

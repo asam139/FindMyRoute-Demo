@@ -14,6 +14,8 @@ protocol Positioned: Decodable {
     var name: String { get }
     var x: Float { get }
     var y: Float { get }
+
+    var snippet: String? { get }
 }
 
 extension Positioned {

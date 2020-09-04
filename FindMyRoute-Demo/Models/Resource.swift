@@ -101,6 +101,19 @@ enum Resource: Decodable, PositionedResource {
             return r.companyZoneId
         }
     }
+
+    var snippet: String? {
+        switch self {
+        case .busStop(let r):
+            return r.snippet
+        case .bikeStop(let r):
+            return r.snippet
+        case .electricCar(let r):
+            return r.snippet
+        case .moped(let r):
+            return r.snippet
+        }
+    }
 }
 
 struct BusStop: PositionedResource {
@@ -114,6 +127,10 @@ struct BusStop: PositionedResource {
     var locationType: Int64
     var lat: Float
     var lon: Float
+
+    var snippet: String? {
+        return "Bus Station\n Scheduled Arrival: \(scheduledArrival > 0 ? String(scheduledArrival) : "-")"
+    }
 }
 
 struct BikeStop: PositionedResource {
@@ -130,6 +147,10 @@ struct BikeStop: PositionedResource {
     var allowDropoff: Bool
 
     var bikesAvailable: Int
+
+    var snippet: String? {
+        return "Available Bikes: \(bikesAvailable)\nAvailable Spaces: \(spacesAvailable)"
+    }
 }
 
 struct ElectricCar: PositionedResource {
@@ -147,6 +168,10 @@ struct ElectricCar: PositionedResource {
     var realTimeData: Bool
     var resourceType: String
     var seats: Int
+
+    var snippet: String? {
+        return "Battery Level: \(batteryLevel)%\nSeats: \(seats)"
+    }
 }
 
 struct Moped: PositionedResource {
@@ -165,4 +190,8 @@ struct Moped: PositionedResource {
     var resourceType: String
 
     var helmets: Int
+
+    var snippet: String? {
+        return "Battery Level: \(batteryLevel)%\nHelmets: \(helmets)"
+    }
 }
