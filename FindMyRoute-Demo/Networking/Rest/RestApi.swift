@@ -22,8 +22,8 @@ class RestApi: MainApi {
         self.meepProvider = meepProvider
     }
 
-    func resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Single<[Resource]> {
-        return request(.resources(cityKey: cityKey, lowerLeftLatLon: lowerLeftLatLon, upperRightLatLon: upperRightLatLon))
+    func resources(cityKey: String, region: Region) -> Single<[Resource]> {
+        return request(.resources(cityKey: cityKey, region: region))
     }
 }
 

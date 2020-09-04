@@ -30,9 +30,7 @@ class MapViewModel: ViewModel, ViewModelType {
         Observable.combineLatest(input.city.asObservable(), throttledRefresh)
             .flatMap { (city, region) -> Observable<[Resource]> in
                 print("\(city) --- \(region)")
-                return self.request(city: city,
-                                    lowerLeftLatLon: region.lowerLeftLatLon,
-                                    upperRightLatLon: region.upperRightLatLon)
+                return self.request(city: city, region: region)
                     .asDriver(onErrorJustReturn: []).asObservable()
             }.subscribe(onNext: { (items) in
                 resources.accept(items)
@@ -40,7 +38,7 @@ class MapViewModel: ViewModel, ViewModelType {
         return Output(resources: resources.asDriver())
     }
 
-    func request(city: City, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Observable<[Resource]> {
-        return provider.resources(cityKey: city.key, lowerLeftLatLon: lowerLeftLatLon, upperRightLatLon: upperRightLatLon).asObservable()
+    func request(city: City, region: Region) -> Observable<[Resource]> {
+        return provider.resources(cityKey: city.key, region: region).asObservable()
     }
 }

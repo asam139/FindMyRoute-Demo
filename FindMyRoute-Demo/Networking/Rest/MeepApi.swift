@@ -13,7 +13,7 @@ import Moya
 import Alamofire
 
 enum MeepApi {
-    case resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D)
+    case resources(cityKey: String, region: Region)
 }
 
 extension MeepApi: TargetType {
@@ -26,7 +26,7 @@ extension MeepApi: TargetType {
 
     var path: String {
         switch self {
-        case .resources(let cityKey, _, _): return "routers/\(cityKey)/resources"
+        case .resources(let cityKey, _): return "routers/\(cityKey)/resources"
         }
     }
 
@@ -44,9 +44,9 @@ extension MeepApi: TargetType {
     var parameters: [String: Any]? {
         var params: [String: Any] = [:]
         switch self {
-        case .resources(_ , let lowerLeftLatLon, let upperRightLatLon):
-            params["lowerLeftLatLon"] = lowerLeftLatLon.commaString
-            params["upperRightLatLon"] = upperRightLatLon.commaString
+        case .resources(_ , let region):
+            params["lowerLeftLatLon"] = region.lowerLeftLatLon.commaString
+            params["upperRightLatLon"] = region.upperRightLatLon.commaString
         }
         return params
     }

@@ -14,5 +14,5 @@ import RxCocoa
 protocol MainApi {
 
     // MARK: - Meep
-    func resources(cityKey: String, lowerLeftLatLon: CLLocationCoordinate2D, upperRightLatLon: CLLocationCoordinate2D) -> Single<[Resource]>
+    func resources(cityKey: String, region: Region) -> Single<[Resource]>
 }
