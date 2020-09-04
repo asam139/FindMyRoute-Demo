@@ -27,14 +27,13 @@ class MapViewModel: ViewModel, ViewModelType {
 
         let throttledRefresh = input.refresh.throttle(.milliseconds(250), scheduler: MainScheduler.instance)
 
-        Observable.combineLatest(input.city.asObservable(), throttledRefresh)
-            .flatMap { (city, region) -> Observable<[Resource]> in
-                print("\(city) --- \(region)")
-                return self.request(city: city, region: region)
-                    .asDriver(onErrorJustReturn: []).asObservable()
-            }.subscribe(onNext: { (items) in
-                resources.accept(items)
-            }).disposed(by: rx.disposeBag)
+        let results = Observable
+            .combineLatest(input.city.asObservable(), throttledRefresh)
+            .flatMap { (city, region) -> Driver<[Resource]> in
+                self.request(city: city, region: region)
+                    .asDriver(onErrorJustReturn: [])
+            }
+        results.bind(to: resources).disposed(by: rx.disposeBag)
         return Output(resources: resources.asDriver())
     }
 
