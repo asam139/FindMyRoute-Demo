@@ -1,5 +1,5 @@
 //
-//  Reachability.swift
+//  ReachabilityManager.swift
 //  FindMyRoute-Demo
 //
 //  Created by Saul Moreno Abril on 2/9/20.
@@ -15,7 +15,7 @@ func connectedToInternet() -> Observable<Bool> {
     return ReachabilityManager.shared.reach
 }
 
-private class ReachabilityManager: NSObject {
+class ReachabilityManager: NSObject {
 
     static let shared = ReachabilityManager()
 

@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     let defaultRadius: CLLocationDistance = 250 // meters
-    let defaultPadding: CGFloat = 50 // meters
+    let defaultPadding: CGFloat = 5
 
     // TODO: Create cities selector
     lazy var city: Driver<City> = {
@@ -112,8 +112,9 @@ class MapViewController: UIViewController {
             let marker = GMSMarker()
             marker.position = resource.position
             marker.title = resource.name
-            //marker.snippet = "Lisboa"
+            marker.icon = ImagesManager.shared.markerImage(forKey: String(resource.companyZoneId))
             marker.map = mapView
+
         }
     }
 }

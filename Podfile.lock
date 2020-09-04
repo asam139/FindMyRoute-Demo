@@ -15,6 +15,7 @@ PODS:
     - RxSwift (~> 5.0)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
+  - RandomColorSwift (2.0.0)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.0)
   - Moya/RxSwift (~> 14.0)
   - "NSObject+Rx (~> 5.0)"
+  - RandomColorSwift (~> 2.0)
   - RxBlocking (~> 5.0)
   - RxCocoa (~> 5.0)
   - RxCoreLocation (~> 1.5)
@@ -96,6 +98,7 @@ SPEC REPOS:
     - GoogleMaps
     - Moya
     - "NSObject+Rx"
+    - RandomColorSwift
     - RxBlocking
     - RxCocoa
     - RxCoreLocation
@@ -115,6 +118,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  RandomColorSwift: d18b9b025403137b5543a002187489b06cc1782b
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxCoreLocation: 4789d980742b21c087062387f6758b456221fb2f
@@ -128,6 +132,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: a0355b44fe9eb3b0d8fd123e962217a5e4449cc7
+PODFILE CHECKSUM: f9c88ffcae0fc107ed71d20c970d09a71f61b1b4
 
 COCOAPODS: 1.9.3

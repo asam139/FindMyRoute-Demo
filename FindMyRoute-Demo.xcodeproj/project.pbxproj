@@ -27,13 +27,14 @@
 		9CBE3A2624FFFBB000546C63 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2524FFFBB000546C63 /* Resource.swift */; };
 		9CBE3A2824FFFCD500546C63 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2724FFFCD500546C63 /* Networking.swift */; };
 		9CBE3A2A24FFFDC400546C63 /* OnlineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2924FFFDC400546C63 /* OnlineProvider.swift */; };
-		9CBE3A2D24FFFFB200546C63 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2C24FFFFB200546C63 /* Reachability.swift */; };
+		9CBE3A2D24FFFFB200546C63 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2C24FFFFB200546C63 /* ReachabilityManager.swift */; };
 		9CBE3A2F2500031000546C63 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2E2500031000546C63 /* Log.swift */; };
 		9CBE3A312500077500546C63 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A302500077500546C63 /* RestApi.swift */; };
 		9CBE3A3525000F5A00546C63 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A3425000F5A00546C63 /* MapViewModel.swift */; };
 		9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A3625000F8700546C63 /* ViewModelType.swift */; };
 		9CF0C965250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */; };
 		9CF0C96725029C0500D161EF /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96625029C0500D161EF /* Region.swift */; };
+		9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9682502AF5100D161EF /* ImagesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,13 +89,14 @@
 		9CBE3A2524FFFBB000546C63 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		9CBE3A2724FFFCD500546C63 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		9CBE3A2924FFFDC400546C63 /* OnlineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineProvider.swift; sourceTree = "<group>"; };
-		9CBE3A2C24FFFFB200546C63 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		9CBE3A2C24FFFFB200546C63 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		9CBE3A2E2500031000546C63 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9CBE3A302500077500546C63 /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		9CBE3A3425000F5A00546C63 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9CBE3A3625000F8700546C63 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		9CF0C96625029C0500D161EF /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		9CF0C9682502AF5100D161EF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E257BE8A8612743C880913A1 /* Pods-FindMyRoute-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyRoute-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -264,8 +266,9 @@
 		9CBE3A2B24FFFF7700546C63 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				9CBE3A2C24FFFFB200546C63 /* Reachability.swift */,
+				9CBE3A2C24FFFFB200546C63 /* ReachabilityManager.swift */,
 				9CBE3A2E2500031000546C63 /* Log.swift */,
+				9CF0C9682502AF5100D161EF /* ImagesManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBE3A2A24FFFDC400546C63 /* OnlineProvider.swift in Sources */,
+				9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */,
 				9CF0C965250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */,
 				9CBE3A2F2500031000546C63 /* Log.swift in Sources */,
@@ -589,7 +593,7 @@
 				9CBE3A312500077500546C63 /* RestApi.swift in Sources */,
 				9C00DD2B25014E5F00C2A5C5 /* City.swift in Sources */,
 				9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */,
-				9CBE3A2D24FFFFB200546C63 /* Reachability.swift in Sources */,
+				9CBE3A2D24FFFFB200546C63 /* ReachabilityManager.swift in Sources */,
 				9CBE3A2624FFFBB000546C63 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
