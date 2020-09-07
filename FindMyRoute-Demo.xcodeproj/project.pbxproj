@@ -34,6 +34,8 @@
 		9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A3625000F8700546C63 /* ViewModelType.swift */; };
 		9CD811A82506489E00597B52 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD811A72506489E00597B52 /* App.swift */; };
 		9CD811AB2506495900597B52 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD811AA2506495900597B52 /* Navigator.swift */; };
+		9CD811B12506535E00597B52 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD811B02506535E00597B52 /* R.generated.swift */; };
+		9CD811B825065A6600597B52 /* resources.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CD811B725065A6600597B52 /* resources.json */; };
 		9CF0C965250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */; };
 		9CF0C96725029C0500D161EF /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96625029C0500D161EF /* Region.swift */; };
 		9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9682502AF5100D161EF /* ImagesManager.swift */; };
@@ -98,6 +100,8 @@
 		9CBE3A3625000F8700546C63 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		9CD811A72506489E00597B52 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		9CD811AA2506495900597B52 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		9CD811B02506535E00597B52 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		9CD811B725065A6600597B52 /* resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resources.json; sourceTree = "<group>"; };
 		9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		9CF0C96625029C0500D161EF /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		9CF0C9682502AF5100D161EF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
@@ -210,8 +214,8 @@
 				9CF09060250176170075278D /* Extensions */,
 				9C00DD2E25016F1F00C2A5C5 /* Utils */,
 				9CAF451B24FEB9310018D8AB /* Main.storyboard */,
-				9CAF451E24FEB9320018D8AB /* Assets.xcassets */,
 				9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */,
+				9CD811AF2506532100597B52 /* Resources */,
 				9CAF452324FEB9320018D8AB /* Info.plist */,
 			);
 			path = "FindMyRoute-Demo";
@@ -305,6 +309,24 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		9CD811AF2506532100597B52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CD811B625065A5800597B52 /* Stubbed Responses */,
+				9CD811B02506535E00597B52 /* R.generated.swift */,
+				9CAF451E24FEB9320018D8AB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9CD811B625065A5800597B52 /* Stubbed Responses */ = {
+			isa = PBXGroup;
+			children = (
+				9CD811B725065A6600597B52 /* resources.json */,
+			);
+			path = "Stubbed Responses";
+			sourceTree = "<group>";
+		};
 		9CF09060250176170075278D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,11 +343,12 @@
 			buildConfigurationList = 9CAF453C24FEB9320018D8AB /* Build configuration list for PBXNativeTarget "FindMyRoute-Demo" */;
 			buildPhases = (
 				DC7596C5B2195C91F24E117D /* [CP] Check Pods Manifest.lock */,
+				9CD811AE250652A000597B52 /* R.swift */,
+				9CAF455724FEC1360018D8AB /* SwiftLint */,
 				9CAF450E24FEB9310018D8AB /* Sources */,
 				9CAF450F24FEB9310018D8AB /* Frameworks */,
 				9CAF451024FEB9310018D8AB /* Resources */,
 				7BAA5DB2F6FAC8CE14F1833D /* [CP] Embed Pods Frameworks */,
-				9CAF455724FEC1360018D8AB /* SwiftLint */,
 				14E2544CAFA0391CC689DFF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -426,6 +449,7 @@
 			files = (
 				9CAF452224FEB9320018D8AB /* LaunchScreen.storyboard in Resources */,
 				9CAF451F24FEB9320018D8AB /* Assets.xcassets in Resources */,
+				9CD811B825065A6600597B52 /* resources.json in Resources */,
 				9CAF451D24FEB9310018D8AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +562,26 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect --format\n";
 		};
+		9CD811AE250652A000597B52 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		C15BE0A1042ADAFA2899BA83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,6 +645,7 @@
 				9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */,
 				9CF0C96725029C0500D161EF /* Region.swift in Sources */,
 				9CBE3A2824FFFCD500546C63 /* Networking.swift in Sources */,
+				9CD811B12506535E00597B52 /* R.generated.swift in Sources */,
 				9C00DD3025016FC800C2A5C5 /* MapUtils.swift in Sources */,
 				9CD811A82506489E00597B52 /* App.swift in Sources */,
 				9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */,

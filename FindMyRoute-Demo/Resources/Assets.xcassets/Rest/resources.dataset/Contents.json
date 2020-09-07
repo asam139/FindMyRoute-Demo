@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "resources.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

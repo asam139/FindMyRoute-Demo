@@ -64,9 +64,9 @@ extension MeepApi: TargetType {
 
     var sampleData: Data {
         var dataUrl: URL?
-        /*switch self {
-         case .routes: dataUrl = ...
-         }*/
+        switch self {
+        case .resources: dataUrl = R.file.resourcesJson()
+        }
         if let url = dataUrl, let data = try? Data(contentsOf: url) {
             return data
         }

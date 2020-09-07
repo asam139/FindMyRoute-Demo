@@ -29,6 +29,7 @@ target 'FindMyRoute-Demo' do
   # Tools
   pod 'SwiftLint', '0.40.0'
   pod 'RandomColorSwift', '~> 2.0'
+  pod 'R.swift', '~> 5.0'
 
   # Logging
   pod 'CocoaLumberjack/Swift', '~> 3.0'
