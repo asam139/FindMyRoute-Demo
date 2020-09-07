@@ -41,6 +41,10 @@
 		9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9682502AF5100D161EF /* ImagesManager.swift */; };
 		9CF0C96B2506834C00D161EF /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96A2506834C00D161EF /* Dictionary+Extensions.swift */; };
 		9CF0C96D2506853F00D161EF /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */; };
+		9CF0C9702506865300D161EF /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96F2506865300D161EF /* BusStop.swift */; };
+		9CF0C9722506866600D161EF /* BikeStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9712506866600D161EF /* BikeStop.swift */; };
+		9CF0C9742506867600D161EF /* ElectricCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9732506867600D161EF /* ElectricCar.swift */; };
+		9CF0C9762506868100D161EF /* Moped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9752506868100D161EF /* Moped.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,10 @@
 		9CF0C9682502AF5100D161EF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
 		9CF0C96A2506834C00D161EF /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		9CF0C96F2506865300D161EF /* BusStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		9CF0C9712506866600D161EF /* BikeStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStop.swift; sourceTree = "<group>"; };
+		9CF0C9732506867600D161EF /* ElectricCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCar.swift; sourceTree = "<group>"; };
+		9CF0C9752506868100D161EF /* Moped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moped.swift; sourceTree = "<group>"; };
 		A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E257BE8A8612743C880913A1 /* Pods-FindMyRoute-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyRoute-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +236,7 @@
 		9CAF452B24FEB9320018D8AB /* FindMyRoute-DemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				9CF0C96E2506860800D161EF /* Models */,
 				9CAF452C24FEB9320018D8AB /* FindMyRouteDemoTests.swift */,
 				9CAF452E24FEB9320018D8AB /* Info.plist */,
 			);
@@ -267,9 +276,9 @@
 			isa = PBXGroup;
 			children = (
 				9C00DD2C25016C7200C2A5C5 /* Positioned.swift */,
-				9CBE3A2524FFFBB000546C63 /* Resource.swift */,
 				9C00DD2A25014E5F00C2A5C5 /* City.swift */,
 				9CF0C96625029C0500D161EF /* Region.swift */,
+				9CF0C9772506868800D161EF /* Resources */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,6 +348,25 @@
 				9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CF0C96E2506860800D161EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CF0C9772506868800D161EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CBE3A2524FFFBB000546C63 /* Resource.swift */,
+				9CF0C96F2506865300D161EF /* BusStop.swift */,
+				9CF0C9712506866600D161EF /* BikeStop.swift */,
+				9CF0C9732506867600D161EF /* ElectricCar.swift */,
+				9CF0C9752506868100D161EF /* Moped.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,11 +668,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBE3A2A24FFFDC400546C63 /* OnlineProvider.swift in Sources */,
+				9CF0C9742506867600D161EF /* ElectricCar.swift in Sources */,
 				9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */,
 				9CF0C965250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */,
+				9CF0C9722506866600D161EF /* BikeStop.swift in Sources */,
 				9CBE3A2F2500031000546C63 /* Log.swift in Sources */,
 				9CD811AB2506495900597B52 /* Navigator.swift in Sources */,
+				9CF0C9762506868100D161EF /* Moped.swift in Sources */,
 				9CBE3A2324FFF4D400546C63 /* MeepApi.swift in Sources */,
 				9CBE3A3525000F5A00546C63 /* MapViewModel.swift in Sources */,
 				9C2E5F3024FECEA1007145BB /* Config.swift in Sources */,
@@ -663,6 +694,7 @@
 				9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */,
 				9CBE3A2D24FFFFB200546C63 /* ReachabilityManager.swift in Sources */,
 				9CBE3A2624FFFBB000546C63 /* Resource.swift in Sources */,
+				9CF0C9702506865300D161EF /* BusStop.swift in Sources */,
 				9CF0C96B2506834C00D161EF /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
