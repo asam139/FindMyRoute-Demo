@@ -66,7 +66,8 @@ struct MeepNetworking: NetworkingType {
                                 OnlineProvider(
                                     endpointClosure: endpointsClosure(),
                                     requestClosure: MeepNetworking.endpointResolver(),
-                                    stubClosure: MoyaProvider.immediatelyStub, online: .just(true)
+                                    stubClosure: MoyaProvider.immediatelyStub,
+                                    online: .just(true)
                                 )
         )
     }
