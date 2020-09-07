@@ -217,8 +217,8 @@
 		9CAF451424FEB9310018D8AB /* FindMyRoute-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				9CD811A92506493700597B52 /* App */,
 				9C2E5F2924FECBE9007145BB /* Configs */,
+				9CD811A92506493700597B52 /* App */,
 				9CBE3A2B24FFFF7700546C63 /* Manager */,
 				9CBE3A1E24FFEF0D00546C63 /* Networking */,
 				9CBE3A2424FFFB3100546C63 /* Models */,
@@ -403,7 +403,6 @@
 				9CAF452524FEB9320018D8AB /* Frameworks */,
 				9CAF452624FEB9320018D8AB /* Resources */,
 				75C7EB6EE18FE8B96C921BB5 /* [CP] Embed Pods Frameworks */,
-				146DC0A42DCAA715C62CB36F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,23 +507,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		146DC0A42DCAA715C62CB36F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		14E2544CAFA0391CC689DFF3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,7 +629,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -965,7 +947,7 @@
 		};
 		9CAF454024FEB9320018D8AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2E5F2B24FECC09007145BB /* Debug.xcconfig */;
+			baseConfigurationReference = 52487D5ED7E7289BDC6DFEA4 /* Pods-FindMyRoute-DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -989,7 +971,7 @@
 		};
 		9CAF454124FEB9320018D8AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2E5F2A24FECC09007145BB /* Release.xcconfig */;
+			baseConfigurationReference = 77E821CCAC6DAD93D1714806 /* Pods-FindMyRoute-DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1013,7 +995,7 @@
 		};
 		9CAF454324FEB9320018D8AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2E5F2B24FECC09007145BB /* Debug.xcconfig */;
+			baseConfigurationReference = 119DABA5036048FB8293E9FE /* Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";
@@ -1035,7 +1017,7 @@
 		};
 		9CAF454424FEB9320018D8AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2E5F2A24FECC09007145BB /* Release.xcconfig */;
+			baseConfigurationReference = 3DDDF1D2BADF335A07D7EE62 /* Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_IDENTITY = "";

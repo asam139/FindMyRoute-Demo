@@ -10,8 +10,6 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 #include "Pods/Target Support Files/Pods-FindMyRoute-Demo/Pods-FindMyRoute-Demo.release.xcconfig"
-#include "Pods/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests.release.xcconfig"
-#include "Pods/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests.release.xcconfig"
 
 // Base URL
 MEEP_BASE_URL = https:/$()/apidev.meep.me/tripplan/api/v1/

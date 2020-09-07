@@ -2,9 +2,6 @@
 platform :ios, '13.6'
 
 def standard_pods
-    # Comment the next line if you don't want to use dynamic frameworks
-    use_frameworks!
-
     # Networking
     pod 'Moya/RxSwift', '~> 14.0'
 
@@ -39,14 +36,14 @@ def standard_pods
 end
 
 target 'FindMyRoute-Demo' do
+  use_frameworks!
   standard_pods
 
   target 'FindMyRoute-DemoTests' do
     inherit! :search_paths
-    standard_pods
 
     #pod 'Quick', '~> 3.0'
-    #pod 'Nimble', '~> 8.0'
+    pod 'Nimble', '~> 8.0'
     # Rx
     #pod 'RxBlocking', '~> 5.0'
     #pod 'RxTest', '~> 5.0'

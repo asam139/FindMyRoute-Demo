@@ -15,6 +15,7 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - Nimble (8.1.2)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
   - R.swift (5.2.2):
@@ -80,6 +81,7 @@ DEPENDENCIES:
   - Codextended (~> 0.3)
   - Hero (~> 1.5)
   - Moya/RxSwift (~> 14.0)
+  - Nimble (~> 8.0)
   - "NSObject+Rx (~> 5.0)"
   - R.swift (~> 5.0)
   - RandomColorSwift (~> 2.0)
@@ -101,6 +103,7 @@ SPEC REPOS:
     - GoogleMaps
     - Hero
     - Moya
+    - Nimble
     - "NSObject+Rx"
     - R.swift
     - R.swift.Library
@@ -123,6 +126,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nimble: 3864815b4703c7ebffba875973c70e854489fbae
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
@@ -138,6 +142,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: f421756609b22de707252c5a639b15248140f629
+PODFILE CHECKSUM: 5c1e004a4a6355ccd685fd95f90da6151f924cb8
 
 COCOAPODS: 1.9.3
