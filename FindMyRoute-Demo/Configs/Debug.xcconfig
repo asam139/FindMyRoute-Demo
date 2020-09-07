@@ -11,7 +11,7 @@
 
 #include "Pods/Target Support Files/Pods-FindMyRoute-Demo/Pods-FindMyRoute-Demo.debug.xcconfig"
 #include "Pods/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests.debug.xcconfig"
-#include "Pods/Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.debug.xcconfig"
+#include "Pods/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests.debug.xcconfig"
 
 // Base URL
 MEEP_BASE_URL = https:/$()/apidev.meep.me/tripplan/api/v1/

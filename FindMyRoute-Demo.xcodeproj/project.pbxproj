@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3242BE71D93D44992A44D9EF /* Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01E9FD021E5BFE086C8B6CA /* Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework */; };
 		358771C7DD9C22890DBF1D2A /* Pods_FindMyRoute_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4D6F75AA3016A3B2D7328D /* Pods_FindMyRoute_DemoTests.framework */; };
-		6FDA8E513AACCBCB8D62132E /* Pods_FindMyRoute_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */; };
 		91B0BCD121BDDBE6425A5ECC /* Pods_FindMyRoute_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900271E3EA14F879A1B789C3 /* Pods_FindMyRoute_Demo.framework */; };
 		9C00DD2B25014E5F00C2A5C5 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00DD2A25014E5F00C2A5C5 /* City.swift */; };
 		9C00DD2D25016C7200C2A5C5 /* Positioned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00DD2C25016C7200C2A5C5 /* Positioned.swift */; };
@@ -117,8 +117,8 @@
 		9CF0C9712506866600D161EF /* BikeStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeStop.swift; sourceTree = "<group>"; };
 		9CF0C9732506867600D161EF /* ElectricCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCar.swift; sourceTree = "<group>"; };
 		9CF0C9752506868100D161EF /* Moped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moped.swift; sourceTree = "<group>"; };
-		A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E257BE8A8612743C880913A1 /* Pods-FindMyRoute-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyRoute-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F01E9FD021E5BFE086C8B6CA /* Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FDA8E513AACCBCB8D62132E /* Pods_FindMyRoute_DemoUITests.framework in Frameworks */,
+				3242BE71D93D44992A44D9EF /* Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +169,7 @@
 			children = (
 				900271E3EA14F879A1B789C3 /* Pods_FindMyRoute_Demo.framework */,
 				7A4D6F75AA3016A3B2D7328D /* Pods_FindMyRoute_DemoTests.framework */,
-				A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */,
+				F01E9FD021E5BFE086C8B6CA /* Pods_FindMyRoute_Demo_FindMyRoute_DemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -403,6 +403,7 @@
 				9CAF452524FEB9320018D8AB /* Frameworks */,
 				9CAF452624FEB9320018D8AB /* Resources */,
 				75C7EB6EE18FE8B96C921BB5 /* [CP] Embed Pods Frameworks */,
+				146DC0A42DCAA715C62CB36F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,6 +423,8 @@
 				9CAF452F24FEB9320018D8AB /* Sources */,
 				9CAF453024FEB9320018D8AB /* Frameworks */,
 				9CAF453124FEB9320018D8AB /* Resources */,
+				990D46BE633F691D222B45E8 /* [CP] Embed Pods Frameworks */,
+				E71D6E92B2C15CA96B61A22C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -505,6 +508,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		146DC0A42DCAA715C62CB36F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-DemoTests/Pods-FindMyRoute-DemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		14E2544CAFA0391CC689DFF3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +557,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FindMyRoute-DemoUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -578,6 +598,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo/Pods-FindMyRoute-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		990D46BE633F691D222B45E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9CAF455724FEC1360018D8AB /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -610,7 +647,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -658,6 +695,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E71D6E92B2C15CA96B61A22C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests/Pods-FindMyRoute-Demo-FindMyRoute-DemoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
