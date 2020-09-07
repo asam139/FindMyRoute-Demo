@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-struct Region: Codable {
+struct Region: Codable, Equatable {
     var lowerLeftLatLon: CLLocationCoordinate2D
     var upperRightLatLon: CLLocationCoordinate2D
 
@@ -40,5 +40,12 @@ struct Region: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(lowerLeftLatLon.commaString, forKey: .lowerLeftLatLon)
         try container.encode(upperRightLatLon.commaString, forKey: .upperRightLatLon)
+    }
+
+    static func == (lhs: Region, rhs: Region) -> Bool {
+        return lhs.lowerLeftLatLon.latitude == rhs.lowerLeftLatLon.latitude &&
+            lhs.lowerLeftLatLon.longitude == rhs.lowerLeftLatLon.longitude &&
+            lhs.upperRightLatLon.latitude == rhs.upperRightLatLon.latitude &&
+            lhs.upperRightLatLon.longitude == rhs.upperRightLatLon.longitude
     }
 }

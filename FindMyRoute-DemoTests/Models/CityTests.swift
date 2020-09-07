@@ -16,39 +16,19 @@ class CityTests: QuickSpec {
 
     override func spec() {
 
-        let city = City(id: "0", key: "lisboa", name: "Lisboa", x: -9.1604, y: 38.7452)
+        describe("A city is") {
+            it("is identifiable") {
+                let city = City(key: "lisboa", name: "Lisboa", x: -9.1604, y: 38.7452)
+                expect(city.id).notTo(beEmpty())
+            }
 
-        describe("Decoded from JSON") {
-            it("City") {
-
+            it("is codable") {
+                let city = City(id: "0", key: "lisboa", name: "Lisboa", x: -9.1604, y: 38.7452)
                 let data = try city.encoded()
                 let decodedCity = try data.decoded() as City
 
                 expect(city).to(equal(decodedCity))
             }
-
-            //            it("TrendingUser") {
-            //                let data: [String: Any] = ["username": login, "name": name, "url": htmlUrl, "avatar": avatarUrl]
-            //                let user = TrendingUser(JSON: data)
-            //
-            //                expect(user?.username) == login
-            //                expect(user?.name) == name
-            //                expect(user?.url) == htmlUrl
-            //                expect(user?.avatar) == avatarUrl
-            //            }
         }
-
-        //        describe("user lifecycle") {
-        //            it("save and remove user") {
-        //                let data: [String: Any] = ["login": login, "name": name, "type": type, "created_at": createdAt, "html_url": htmlUrl, "avatar_url": avatarUrl]
-        //                let user = User(JSON: data)
-        //
-        //                User.removeCurrentUser()
-        //                expect(user?.isMine()) == false
-        //
-        //                user?.save()
-        //                expect(user?.isMine()) == true
-        //            }
-        //        }
     }
 }

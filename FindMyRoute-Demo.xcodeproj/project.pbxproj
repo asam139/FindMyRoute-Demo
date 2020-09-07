@@ -14,13 +14,14 @@
 		9C00DD2D25016C7200C2A5C5 /* Positioned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00DD2C25016C7200C2A5C5 /* Positioned.swift */; };
 		9C00DD3025016FC800C2A5C5 /* MapUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00DD2F25016FC800C2A5C5 /* MapUtils.swift */; };
 		9C2E5F3024FECEA1007145BB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2E5F2F24FECEA1007145BB /* Config.swift */; };
+		9C4D76A32506B5E900460851 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76A22506B5E900460851 /* CityTests.swift */; };
+		9C4D76A62506BAB200460851 /* RegionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76A52506BAB200460851 /* RegionTests.swift */; };
 		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
 		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
 		9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* MapViewController.swift */; };
 		9CAF451D24FEB9310018D8AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451B24FEB9310018D8AB /* Main.storyboard */; };
 		9CAF451F24FEB9320018D8AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF451E24FEB9320018D8AB /* Assets.xcassets */; };
 		9CAF452224FEB9320018D8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CAF452024FEB9320018D8AB /* LaunchScreen.storyboard */; };
-		9CAF452D24FEB9320018D8AB /* FindMyRouteDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF452C24FEB9320018D8AB /* FindMyRouteDemoTests.swift */; };
 		9CAF453824FEB9320018D8AB /* FindMyRouteDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF453724FEB9320018D8AB /* FindMyRouteDemoUITests.swift */; };
 		9CBE3A2024FFF13E00546C63 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A1F24FFF13E00546C63 /* Api.swift */; };
 		9CBE3A2324FFF4D400546C63 /* MeepApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBE3A2224FFF4D400546C63 /* MeepApi.swift */; };
@@ -80,6 +81,8 @@
 		9C2E5F2A24FECC09007145BB /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9C2E5F2B24FECC09007145BB /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9C2E5F2F24FECEA1007145BB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9C4D76A22506B5E900460851 /* CityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
+		9C4D76A52506BAB200460851 /* RegionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTests.swift; sourceTree = "<group>"; };
 		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		9CAF452124FEB9320018D8AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CAF452324FEB9320018D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAF452824FEB9320018D8AB /* FindMyRoute-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FindMyRoute-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CAF452C24FEB9320018D8AB /* FindMyRouteDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyRouteDemoTests.swift; sourceTree = "<group>"; };
 		9CAF452E24FEB9320018D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CAF453324FEB9320018D8AB /* FindMyRoute-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FindMyRoute-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF453724FEB9320018D8AB /* FindMyRouteDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMyRouteDemoUITests.swift; sourceTree = "<group>"; };
@@ -237,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				9CF0C96E2506860800D161EF /* Models */,
-				9CAF452C24FEB9320018D8AB /* FindMyRouteDemoTests.swift */,
 				9CAF452E24FEB9320018D8AB /* Info.plist */,
 			);
 			path = "FindMyRoute-DemoTests";
@@ -353,6 +354,8 @@
 		9CF0C96E2506860800D161EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9C4D76A22506B5E900460851 /* CityTests.swift */,
+				9C4D76A52506BAB200460851 /* RegionTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -739,7 +742,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CAF452D24FEB9320018D8AB /* FindMyRouteDemoTests.swift in Sources */,
+				9C4D76A32506B5E900460851 /* CityTests.swift in Sources */,
+				9C4D76A62506BAB200460851 /* RegionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

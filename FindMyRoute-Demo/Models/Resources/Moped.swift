@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Moped: PositionedResource {
+struct Moped: PositionedResource, Equatable {
     var id: String
     var name: String
     var x: Float

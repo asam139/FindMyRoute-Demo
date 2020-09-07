@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BikeStop: PositionedResource {
+struct BikeStop: PositionedResource, Equatable {
     var id: String
     var name: String
     var x: Float

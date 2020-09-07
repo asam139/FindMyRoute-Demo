@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ElectricCar: PositionedResource {
+struct ElectricCar: PositionedResource, Equatable {
     var id: String
     var name: String
     var x: Float

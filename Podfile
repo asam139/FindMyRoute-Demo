@@ -42,11 +42,11 @@ target 'FindMyRoute-Demo' do
   target 'FindMyRoute-DemoTests' do
     inherit! :search_paths
 
-    #pod 'Quick', '~> 3.0'
+    pod 'Quick', '~> 3.0'
     pod 'Nimble', '~> 8.0'
     # Rx
-    #pod 'RxBlocking', '~> 5.0'
-    #pod 'RxTest', '~> 5.0'
+    pod 'RxBlocking', '~> 5.0'
+    pod 'RxTest', '~> 5.0'
 
   end
 
