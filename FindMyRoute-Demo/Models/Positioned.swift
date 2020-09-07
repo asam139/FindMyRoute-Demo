@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-protocol Positioned: Decodable {
+protocol Positioned: Codable {
     var id: String { get }
     var name: String { get }
     var x: Float { get }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class City: Positioned {
+struct City: Positioned, Equatable {
     var id: String
     var key: String
     var name: String

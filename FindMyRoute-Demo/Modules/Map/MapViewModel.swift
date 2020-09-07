@@ -32,7 +32,7 @@ class MapViewModel: ViewModel, ViewModelType {
             .flatMap { (city, region) -> Driver<[Resource]> in
                 self.request(city: city, region: region)
                     .asDriver(onErrorJustReturn: [])
-            }
+        }
         results.bind(to: resources).disposed(by: rx.disposeBag)
         return Output(resources: resources.asDriver())
     }

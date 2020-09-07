@@ -63,12 +63,12 @@ struct MeepNetworking: NetworkingType {
 
     static func stubbingNetworking() -> Self {
         return MeepNetworking(provider:
-                                OnlineProvider(
-                                    endpointClosure: endpointsClosure(),
-                                    requestClosure: MeepNetworking.endpointResolver(),
-                                    stubClosure: MoyaProvider.immediatelyStub,
-                                    online: .just(true)
-                                )
+            OnlineProvider(
+                endpointClosure: endpointsClosure(),
+                requestClosure: MeepNetworking.endpointResolver(),
+                stubClosure: MoyaProvider.immediatelyStub,
+                online: .just(true)
+            )
         )
     }
 

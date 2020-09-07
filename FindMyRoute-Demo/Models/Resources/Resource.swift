@@ -38,6 +38,20 @@ enum Resource: Decodable, PositionedResource {
         }
     }
 
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .busStop(let stop):
+            try container.encode(stop)
+        case .bikeStop(let stop):
+            try container.encode(stop)
+        case .electricCar(let car):
+            try container.encode(car)
+        case .moped(let moped):
+            try container.encode(moped)
+        }
+    }
+
     var id: String {
         switch self {
         case .busStop(let r):
