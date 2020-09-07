@@ -25,6 +25,7 @@ target 'FindMyRoute-Demo' do
   # Code quality
   pod 'SnapKit', '~> 5.0'
   pod 'SwifterSwift', '~> 5.0'
+  pod 'Codextended', '~> 0.3'
 
   # Tools
   pod 'SwiftLint', '0.40.0'
@@ -36,6 +37,8 @@ target 'FindMyRoute-Demo' do
 
   target 'FindMyRoute-DemoTests' do
     inherit! :none
+    pod 'Quick', '~> 3.0'
+    pod 'Nimble', '~> 8.0'
 
     # Rx
     pod 'RxBlocking', '~> 5.0'
