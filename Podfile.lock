@@ -3,6 +3,7 @@ PODS:
   - CocoaLumberjack/Core (3.6.2)
   - CocoaLumberjack/Swift (3.6.2):
     - CocoaLumberjack/Core
+  - Codextended (0.3.0)
   - GoogleMaps (3.10.0):
     - GoogleMaps/Maps (= 3.10.0)
   - GoogleMaps/Base (3.10.0)
@@ -14,8 +15,10 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - Nimble (8.1.2)
   - "NSObject+Rx (5.1.0)":
     - RxSwift (~> 5.1)
+  - Quick (3.0.0)
   - R.swift (5.2.2):
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
@@ -80,9 +83,12 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.0)
+  - Codextended (~> 0.3)
   - Hero (~> 1.5)
   - Moya/RxSwift (~> 14.0)
+  - Nimble (~> 8.0)
   - "NSObject+Rx (~> 5.0)"
+  - Quick (~> 3.0)
   - R.swift (~> 5.0)
   - RandomColorSwift (~> 2.0)
   - RxBlocking (~> 5.0)
@@ -101,10 +107,13 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - CocoaLumberjack
+    - Codextended
     - GoogleMaps
     - Hero
     - Moya
+    - Nimble
     - "NSObject+Rx"
+    - Quick
     - R.swift
     - R.swift.Library
     - RandomColorSwift
@@ -124,10 +133,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  Codextended: f384271b8694376ad766ddbf2a011efbfdcee905
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Nimble: 3864815b4703c7ebffba875973c70e854489fbae
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   RandomColorSwift: d18b9b025403137b5543a002187489b06cc1782b
@@ -144,6 +156,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: 8f91b76a6233b84d0713bfd5fe4f7cccf686fae1
+PODFILE CHECKSUM: 76a9ad1046ae3be6bded7279ed235e2821cb49c4
 
 COCOAPODS: 1.9.3
