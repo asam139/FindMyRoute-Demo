@@ -14,6 +14,7 @@ enum Resource: Decodable, PositionedResource {
     case electricCar(ElectricCar)
     case moped(Moped)
 
+    // Special keys to detect differents resources
     private enum CodingKeys: String, CodingKey {
         case scheduledArrival
         case bikesAvailable
