@@ -45,8 +45,7 @@ extension MeepApi: TargetType {
         var params: [String: Any] = [:]
         switch self {
         case .resources(_ , let region):
-            params["lowerLeftLatLon"] = region.lowerLeftLatLon.commaString
-            params["upperRightLatLon"] = region.upperRightLatLon.commaString
+            params.merge(region.parameters)
         }
         return params
     }

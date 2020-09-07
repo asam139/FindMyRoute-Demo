@@ -39,6 +39,8 @@
 		9CF0C965250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */; };
 		9CF0C96725029C0500D161EF /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96625029C0500D161EF /* Region.swift */; };
 		9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C9682502AF5100D161EF /* ImagesManager.swift */; };
+		9CF0C96B2506834C00D161EF /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96A2506834C00D161EF /* Dictionary+Extensions.swift */; };
+		9CF0C96D2506853F00D161EF /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		9CF0C96625029C0500D161EF /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		9CF0C9682502AF5100D161EF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
+		9CF0C96A2506834C00D161EF /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		A65FE1DD28274F070CEA36F3 /* Pods_FindMyRoute_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindMyRoute_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E257BE8A8612743C880913A1 /* Pods-FindMyRoute-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindMyRoute-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-FindMyRoute-DemoUITests/Pods-FindMyRoute-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -331,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF0C964250292F800D161EF /* CLLocationCoordinate2D+Extensions.swift */,
+				9CF0C96A2506834C00D161EF /* Dictionary+Extensions.swift */,
+				9CF0C96C2506853F00D161EF /* Encodable+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				9CBE3A3725000F8700546C63 /* ViewModelType.swift in Sources */,
 				9CF0C96725029C0500D161EF /* Region.swift in Sources */,
 				9CBE3A2824FFFCD500546C63 /* Networking.swift in Sources */,
+				9CF0C96D2506853F00D161EF /* Encodable+Extensions.swift in Sources */,
 				9CD811B12506535E00597B52 /* R.generated.swift in Sources */,
 				9C00DD3025016FC800C2A5C5 /* MapUtils.swift in Sources */,
 				9CD811A82506489E00597B52 /* App.swift in Sources */,
@@ -656,6 +663,7 @@
 				9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */,
 				9CBE3A2D24FFFFB200546C63 /* ReachabilityManager.swift in Sources */,
 				9CBE3A2624FFFBB000546C63 /* Resource.swift in Sources */,
+				9CF0C96B2506834C00D161EF /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
