@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
 
-    var provider: MainApi!
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -40,9 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // Setups
-
     func setup() {
-        provider = RestApi(meepProvider: MeepNetworking.defaultNetworking())
         setupGoogleMaps()
         setupCocoaLumberjack()
     }
@@ -58,5 +56,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fileLogger.logFileManager.maximumNumberOfLogFiles = 7
         DDLog.add(fileLogger)
     }
-
 }

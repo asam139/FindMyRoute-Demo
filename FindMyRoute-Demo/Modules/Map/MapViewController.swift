@@ -18,7 +18,8 @@ import NSObject_Rx
 
 class MapViewController: UIViewController {
 
-    var viewModel: MapViewModel?
+    var viewModel: MapViewModel!
+    var navigator: Navigator!
 
     @IBOutlet weak var mapView: GMSMapView!
     let defaultRadius: CLLocationDistance = 250 // meters
@@ -30,13 +31,12 @@ class MapViewController: UIViewController {
     }()
     let region = PublishSubject<Region>()
 
-    init(viewModel: MapViewModel?) {
+    init(viewModel: MapViewModel, navigator: Navigator) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
-        self.viewModel = MapViewModel(provider: AppDelegate.shared.provider)
         super.init(nibName: nil, bundle: nil)
     }
 

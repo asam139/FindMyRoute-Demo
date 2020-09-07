@@ -19,6 +19,8 @@ target 'FindMyRoute-Demo' do
 
   # UI
   pod 'RxGoogleMaps', '~> 4.0'
+  pod 'Hero', '~> 1.5'
+
 
   # Code quality
   pod 'SnapKit', '~> 5.0'

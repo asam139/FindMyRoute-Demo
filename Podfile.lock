@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.2.1)
+  - Alamofire (5.2.2)
   - CocoaLumberjack/Core (3.6.2)
   - CocoaLumberjack/Swift (3.6.2):
     - CocoaLumberjack/Core
@@ -8,6 +8,7 @@ PODS:
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
+  - Hero (1.5.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -76,6 +77,7 @@ PODS:
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift (~> 3.0)
+  - Hero
   - Moya/RxSwift (~> 14.0)
   - "NSObject+Rx (~> 5.0)"
   - RandomColorSwift (~> 2.0)
@@ -96,6 +98,7 @@ SPEC REPOS:
     - Alamofire
     - CocoaLumberjack
     - GoogleMaps
+    - Hero
     - Moya
     - "NSObject+Rx"
     - RandomColorSwift
@@ -113,9 +116,10 @@ SPEC REPOS:
     - SwiftLint
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RandomColorSwift: d18b9b025403137b5543a002187489b06cc1782b
@@ -132,6 +136,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
 
-PODFILE CHECKSUM: f9c88ffcae0fc107ed71d20c970d09a71f61b1b4
+PODFILE CHECKSUM: 2311ba1996df0f3528f7c0daea8bc054cc982e97
 
 COCOAPODS: 1.9.3
