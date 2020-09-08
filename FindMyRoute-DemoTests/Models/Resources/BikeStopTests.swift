@@ -31,7 +31,7 @@ class BikeStopTests: QuickSpec {
                 let data = try bikeStop.encoded()
                 let decoded = try data.decoded() as BikeStop
 
-                expect(bikeStop).to(equal(decoded))
+                expect(bikeStop) == decoded
             }
 
             it("has snippet") {

@@ -27,7 +27,7 @@ class CityTests: QuickSpec {
                 let data = try city.encoded()
                 let decodedCity = try data.decoded() as City
 
-                expect(city).to(equal(decodedCity))
+                expect(city) == decodedCity
             }
         }
     }

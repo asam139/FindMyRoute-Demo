@@ -32,7 +32,7 @@ class MopedTests: QuickSpec {
                 let data = try moped.encoded()
                 let decoded = try data.decoded() as Moped
 
-                expect(moped).to(equal(decoded))
+                expect(moped) == decoded
             }
 
             it("has snippet") {

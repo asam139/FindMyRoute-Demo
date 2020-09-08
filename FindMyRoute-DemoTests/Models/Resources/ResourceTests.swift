@@ -28,19 +28,20 @@ class ResourceTests: QuickSpec {
 
                 switch decoded {
                 case .busStop(let stop):
-                    expect(busStop).to(equal(stop))
-                    expect(try decoded.encoded().decoded() as BusStop).to(equal(stop))
+                    expect(busStop) == stop
+                    expect(try decoded.encoded().decoded() as BusStop) == stop
                 default:
                     fail("Expecting a bus stop")
                     break
                 }
 
-                expect(busStop.id).to(equal(decoded.id))
-                expect(busStop.name).to(equal(decoded.name))
-                expect(busStop.x).to(equal(decoded.x))
-                expect(busStop.y).to(equal(decoded.y))
-                expect(busStop.companyZoneId).to(equal(decoded.companyZoneId))
-                expect(busStop.snippet).to(equal(decoded.snippet))
+                expect(busStop.id) == decoded.id
+                expect(busStop.name) == decoded.name
+                expect(busStop.x) == decoded.x
+                expect(busStop.y) == decoded.y
+                expect(busStop.companyZoneId) == decoded.companyZoneId
+                expect(busStop.snippet) == decoded.snippet
+                expect(busStop.position) == decoded.position
             }
 
             it("can be a bike stop") {
@@ -55,19 +56,20 @@ class ResourceTests: QuickSpec {
 
                 switch decoded {
                 case .bikeStop(let stop):
-                    expect(bikeStop).to(equal(stop))
-                    expect(try decoded.encoded().decoded() as BikeStop).to(equal(stop))
+                    expect(bikeStop) == stop
+                    expect(try decoded.encoded().decoded() as BikeStop) == stop
                 default:
                     fail("Expecting a bike stop")
                     break
                 }
 
-                expect(bikeStop.id).to(equal(decoded.id))
-                expect(bikeStop.name).to(equal(decoded.name))
-                expect(bikeStop.x).to(equal(decoded.x))
-                expect(bikeStop.y).to(equal(decoded.y))
-                expect(bikeStop.companyZoneId).to(equal(decoded.companyZoneId))
-                expect(bikeStop.snippet).to(equal(decoded.snippet))
+                expect(bikeStop.id) == decoded.id
+                expect(bikeStop.name) == decoded.name
+                expect(bikeStop.x) == decoded.x
+                expect(bikeStop.y) == decoded.y
+                expect(bikeStop.companyZoneId) == decoded.companyZoneId
+                expect(bikeStop.snippet) == decoded.snippet
+                expect(bikeStop.position) == decoded.position
             }
 
             it("can be a electric car") {
@@ -82,19 +84,20 @@ class ResourceTests: QuickSpec {
 
                 switch decoded {
                 case .electricCar(let car):
-                    expect(electricCar).to(equal(car))
-                    expect(try decoded.encoded().decoded() as ElectricCar).to(equal(electricCar))
+                    expect(electricCar) == car
+                    expect(try decoded.encoded().decoded() as ElectricCar) == electricCar
                 default:
                     fail("Expecting a electric car")
                     break
                 }
 
-                expect(electricCar.id).to(equal(decoded.id))
-                expect(electricCar.name).to(equal(decoded.name))
-                expect(electricCar.x).to(equal(decoded.x))
-                expect(electricCar.y).to(equal(decoded.y))
-                expect(electricCar.companyZoneId).to(equal(decoded.companyZoneId))
-                expect(electricCar.snippet).to(equal(decoded.snippet))
+                expect(electricCar.id) == decoded.id
+                expect(electricCar.name) == decoded.name
+                expect(electricCar.x) == decoded.x
+                expect(electricCar.y) == decoded.y
+                expect(electricCar.companyZoneId) == decoded.companyZoneId
+                expect(electricCar.snippet) == decoded.snippet
+                expect(electricCar.position) == decoded.position
             }
 
             it("can be a moped") {
@@ -110,19 +113,20 @@ class ResourceTests: QuickSpec {
 
                 switch decoded {
                 case .moped(let m):
-                    expect(moped).to(equal(m))
-                    expect(try decoded.encoded().decoded() as Moped).to(equal(moped))
+                    expect(moped) == m
+                    expect(try decoded.encoded().decoded() as Moped) == moped
                 default:
                     fail("Expecting a moped")
                     break
                 }
 
-                expect(moped.id).to(equal(decoded.id))
-                expect(moped.name).to(equal(decoded.name))
-                expect(moped.x).to(equal(decoded.x))
-                expect(moped.y).to(equal(decoded.y))
-                expect(moped.companyZoneId).to(equal(decoded.companyZoneId))
-                expect(moped.snippet).to(equal(decoded.snippet))
+                expect(moped.id) == decoded.id
+                expect(moped.name) == decoded.name
+                expect(moped.x) == decoded.x
+                expect(moped.y) == decoded.y
+                expect(moped.companyZoneId) == decoded.companyZoneId
+                expect(moped.snippet) == decoded.snippet
+                expect(moped.position) == decoded.position
             }
 
             it("only can be specific types") {

@@ -28,9 +28,9 @@ class BusStopTests: QuickSpec {
 
             it("is codable") {
                 let data = try busStop.encoded()
-                let decodedBusStop = try data.decoded() as BusStop
+                let decoded = try data.decoded() as BusStop
 
-                expect(busStop).to(equal(decodedBusStop))
+                expect(busStop) == decoded
             }
 
             it("has snippet") {

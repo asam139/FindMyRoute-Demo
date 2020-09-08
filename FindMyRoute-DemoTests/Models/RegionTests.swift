@@ -26,7 +26,7 @@ class RegionTests: QuickSpec {
                 let data = try region.encoded()
                 let decodedRegion = try data.decoded() as Region
 
-                expect(region).to(equal(decodedRegion))
+                expect(region) == decodedRegion
             }
         }
     }

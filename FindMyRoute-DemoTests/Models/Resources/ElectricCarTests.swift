@@ -31,7 +31,7 @@ class ElectricCarTests: QuickSpec {
                 let data = try car.encoded()
                 let decoded = try data.decoded() as ElectricCar
 
-                expect(car).to(equal(decoded))
+                expect(car) == decoded
             }
 
             it("has snippet") {
