@@ -27,6 +27,16 @@ extension NetworkingType {
         }
     }
 
+    static func errorEndpointsClosure<T>(_ xAccessToken: String? = nil) -> (T) -> Endpoint where T: TargetType {
+        return { target in
+            return Endpoint(url: URL(target: target).absoluteString,
+                            sampleResponseClosure: { .networkResponse(500 , Data()) },
+                            method: target.method,
+                            task: target.task,
+                            httpHeaderFields: target.headers)
+        }
+    }
+
     static func APIKeysBasedStubBehaviour<T>(_: T) -> Moya.StubBehavior {
         return .never
     }
@@ -65,6 +75,17 @@ struct MeepNetworking: NetworkingType {
         return MeepNetworking(provider:
             OnlineProvider(
                 endpointClosure: endpointsClosure(),
+                requestClosure: MeepNetworking.endpointResolver(),
+                stubClosure: MoyaProvider.immediatelyStub,
+                online: .just(true)
+            )
+        )
+    }
+
+    static func stubbingNetworkingWithErrors() -> Self {
+        return MeepNetworking(provider:
+            OnlineProvider(
+                endpointClosure: errorEndpointsClosure(),
                 requestClosure: MeepNetworking.endpointResolver(),
                 stubClosure: MoyaProvider.immediatelyStub,
                 online: .just(true)
