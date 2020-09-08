@@ -7,26 +7,70 @@
 //
 
 import XCTest
+import Quick
+import Nimble
+import RxSwift
+import RxCocoa
+import NSObject_Rx
+import RxBlocking
+import RxTest
+@testable import FindMyRoute_Demo
 
 class ViewModelTypeTests: QuickSpec {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func spec() {
+        var provider: RestApi!  // used stubbing responses
+        var viewModel: ViewModel!
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        beforeEach {
+            provider = RestApi(meepProvider: MeepNetworking.stubbingNetworkingWithErrors())
+            viewModel = ViewModel(provider: provider)
+        }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        afterEach {
+            viewModel = nil
+        }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        describe("a view model") {
+            it("stores server errors") {
+                let error = CocoaError.init(.userCancelled)
+
+                let scheduler = TestScheduler(initialClock: 0, resolution: 1)
+                scheduler.scheduleAt(10) {
+                    viewModel.serverError.onNext(error)
+                }
+
+                let observer = scheduler.record(
+                    viewModel.serverError.asObservable(),
+                    disposeBag: self.rx.disposeBag
+                )
+                scheduler.start()
+
+                expect(observer.events.count) > 0
+                expect(observer.events.first?.value.element as? CocoaError) == error
+
+            }
+
+            it("parses errors") {
+                let error = MoyaError.requestMapping("Test Error")
+
+                let scheduler = TestScheduler(initialClock: 0, resolution: 1)
+                scheduler.scheduleAt(10) {
+                    viewModel.serverError.onNext(error)
+                }
+
+                let observer = scheduler.record(
+                    viewModel.parsedError.asObservable(),
+                    disposeBag: self.rx.disposeBag
+                )
+                scheduler.start()
+
+                expect(observer.events.count) > 0
+                expect(expression: { () -> Int? in
+                    let moyaError = observer.events.first?.value.element
+                    return moyaError?.errorCode
+                }) == error.errorCode
+            }
         }
     }
 
