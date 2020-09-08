@@ -263,7 +263,7 @@
 			children = (
 				9C2E5F2924FECBE9007145BB /* Configs */,
 				9CD811A92506493700597B52 /* App */,
-				9CBE3A2B24FFFF7700546C63 /* Manager */,
+				9CBE3A2B24FFFF7700546C63 /* Managers */,
 				9CBE3A1E24FFEF0D00546C63 /* Networking */,
 				9CBE3A2424FFFB3100546C63 /* Models */,
 				9CBE3A3225000F4600546C63 /* Modules */,
@@ -328,14 +328,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		9CBE3A2B24FFFF7700546C63 /* Manager */ = {
+		9CBE3A2B24FFFF7700546C63 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				9CBE3A2C24FFFFB200546C63 /* ReachabilityManager.swift */,
 				9CBE3A2E2500031000546C63 /* Log.swift */,
 				9CF0C9682502AF5100D161EF /* ImagesManager.swift */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		9CBE3A3225000F4600546C63 /* Modules */ = {
