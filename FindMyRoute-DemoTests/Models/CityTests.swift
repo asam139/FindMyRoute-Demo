@@ -16,7 +16,7 @@ class CityTests: QuickSpec {
 
     override func spec() {
 
-        describe("A city is") {
+        describe("A city") {
             it("is identifiable") {
                 let city = City(key: "lisboa", name: "Lisboa", x: -9.1604, y: 38.7452)
                 expect(city.id).notTo(beEmpty())

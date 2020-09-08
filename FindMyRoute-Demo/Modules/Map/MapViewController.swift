@@ -115,7 +115,6 @@ class MapViewController: UIViewController {
             marker.snippet = resource.snippet
             marker.icon = ImagesManager.shared.markerImage(forKey: String(resource.companyZoneId))
             marker.map = mapView
-
         }
     }
 }

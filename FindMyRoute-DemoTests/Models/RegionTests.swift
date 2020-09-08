@@ -17,7 +17,7 @@ class RegionTests: QuickSpec {
 
     override func spec() {
 
-        describe("A region is") {
+        describe("A region") {
             let lowerLeftLatLon = CLLocationCoordinate2D(latitude: -10, longitude: 40)
             let upperRightLatLon = CLLocationCoordinate2D(latitude: -9, longitude: 41)
 

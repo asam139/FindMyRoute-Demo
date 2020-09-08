@@ -29,7 +29,7 @@ class MapViewModel: ViewModel, ViewModelType {
 
         let results = Observable
             .combineLatest(input.city.asObservable(), throttledRefresh)
-            .flatMap { (city, region) -> Driver<[Resource]> in
+            .flatMapLatest { (city, region) -> Driver<[Resource]> in
                 self.request(city: city, region: region)
                     .asDriver(onErrorJustReturn: [])
         }
