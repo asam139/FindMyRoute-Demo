@@ -42,14 +42,14 @@ class MapViewModelTests: QuickSpec {
 
         describe("A map view model") {
             it("starts empty") {
-                expect { try output.resources.toBlocking().first() }.to(beEmpty())
+                expect(output.resources.value).to(beEmpty())
             }
 
             context("when refreshes the region") {
                 it("new resources appear") {
                     refresh.onNext(Region(lowerLeftLatLon: CLLocationCoordinate2D(latitude: -9, longitude: 40),
                                           upperRightLatLon: CLLocationCoordinate2D(latitude: -10, longitude: 41)))
-                    expect { try output.resources.toBlocking().first() }.toNot(beEmpty())
+                    expect(output.resources.value).toNot(beEmpty())
                 }
             }
         }

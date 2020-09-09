@@ -29,8 +29,9 @@ class MapViewModel: ViewModel, ViewModelType {
 
         let results = Observable
             .combineLatest(input.city.asObservable(), throttledRefresh)
-            .flatMapLatest { (city, region) in
-                self.request(city: city, region: region)
+            .flatMapLatest { (city, region) -> Observable<[Resource]> in
+                print("City-Region", city, region)
+                return self.request(city: city, region: region)
         }
         results.bind(to: resources).disposed(by: rx.disposeBag)
         return Output(resources: resources)

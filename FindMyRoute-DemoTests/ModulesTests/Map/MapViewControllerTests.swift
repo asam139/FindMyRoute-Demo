@@ -17,18 +17,17 @@ import GoogleMaps
 
 class MapViewControllerTests: QuickSpec {
     override func spec() {
-        var view: MapViewController!
-
-        beforeEach {
-            let provider = RestApi(meepProvider: MeepNetworking.stubbingNetworking())
-            let viewModel = MapViewModel(provider: provider)
-            let navigator = Navigator.default
-
-            view = MapViewController(viewModel: viewModel, navigator: navigator)
-            view.loadViewIfNeeded()
-        }
-
         describe("A map view") {
+            var view: MapViewController!
+            beforeEach {
+                let provider = RestApi(meepProvider: MeepNetworking.stubbingNetworking())
+                let viewModel = MapViewModel(provider: provider)
+                let navigator = Navigator.default
+
+                view = MapViewController(viewModel: viewModel, navigator: navigator)
+                view.loadViewIfNeeded()
+            }
+
             it("sets up the UI") {
                 expect(view.mapView).toNot(beNil())
                 expect(view.mapView?.bounds) != .zero
@@ -38,6 +37,16 @@ class MapViewControllerTests: QuickSpec {
 
             it("refreshes resources") {
                 expect { try view.resources.skip(1).toBlocking().first() }.notTo(beEmpty())
+            }
+
+            context("a new city is selected") {
+                it("refreshes resources") {
+                    let newCity = City(key: "madrid", name: "Madrid", x: -3.6919, y: 40.4188)
+                    view.city.accept(newCity)
+
+                    expect(view.city.value.id) == newCity.id
+                    expect { try view.resources.skip(1).toBlocking().first() }.notTo(beEmpty())
+                }
             }
         }
     }

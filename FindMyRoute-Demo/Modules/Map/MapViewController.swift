@@ -22,8 +22,8 @@ class MapViewController: ViewController {
     let defaultPadding: CGFloat = 5
 
     // TODO: Create cities selector
-    lazy var city: Driver<City> = {
-        return BehaviorRelay(value: Config.initialCity).asDriver()
+    lazy var city: BehaviorRelay<City> = {
+        return BehaviorRelay(value: Config.initialCity)
     }()
     let region = PublishSubject<Region>()
     let resources = BehaviorRelay<[Resource]>(value: [])
@@ -45,7 +45,7 @@ class MapViewController: ViewController {
         super.bindViewModel()
         guard let viewModel = viewModel as? MapViewModel else { return }
 
-        let input = MapViewModel.Input(city: city, refresh: region.asObservable())
+        let input = MapViewModel.Input(city: city.asDriver(), refresh: region.asObservable())
         let output = viewModel.transform(input: input)
 
         mapView.rx.idleAt.map { [weak self] (_) -> Region? in
