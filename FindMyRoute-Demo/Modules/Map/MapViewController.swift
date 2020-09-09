@@ -82,9 +82,7 @@ class MapViewController: UIViewController {
     }
 
     func fitCameraBounds(_ coordinate: CLLocationCoordinate2D, animate: Bool = true) {
-        let range = MapUtils.translateCoordinate(coordinate: coordinate, latMeters: defaultRadius * 2, lonMeters: defaultRadius * 2)
-        let bounds = GMSCoordinateBounds(coordinate: coordinate, coordinate: range)
-        let update = GMSCameraUpdate.fit(bounds, withPadding: defaultPadding)
+        let update = MapUtils.fitCameraBounds(coordinate, radius: defaultRadius, padding: defaultPadding)
         if animate {
             mapView.animate(with: update)
         } else {

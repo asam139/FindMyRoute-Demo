@@ -267,6 +267,13 @@
 			path = ExtensionsTests;
 			sourceTree = "<group>";
 		};
+		9C4D76C42508CB7D00460851 /* UtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UtilsTests;
+			sourceTree = "<group>";
+		};
 		9CAF450924FEB9310018D8AB = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +323,7 @@
 				9CF0C96E2506860800D161EF /* ModelsTests */,
 				9C4D76B52507C73700460851 /* ModulesTests */,
 				9C4D76C12508C19F00460851 /* ExtensionsTests */,
+				9C4D76C42508CB7D00460851 /* UtilsTests */,
 				9CAF452E24FEB9320018D8AB /* Info.plist */,
 			);
 			path = "FindMyRoute-DemoTests";
