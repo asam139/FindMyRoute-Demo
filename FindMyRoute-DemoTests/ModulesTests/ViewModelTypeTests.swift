@@ -23,7 +23,7 @@ class ViewModelTypeTests: QuickSpec {
         var viewModel: ViewModel!
 
         beforeEach {
-            provider = RestApi(meepProvider: MeepNetworking.stubbingNetworkingWithErrors())
+            provider = RestApi(meepProvider: MeepNetworking.defaultNetworking())
             viewModel = ViewModel(provider: provider)
         }
 
