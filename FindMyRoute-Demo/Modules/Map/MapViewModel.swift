@@ -19,7 +19,7 @@ class MapViewModel: ViewModel, ViewModelType {
     }
 
     struct Output {
-        let resources: Driver<[Resource]>
+        let resources: BehaviorRelay<[Resource]>
     }
 
     func transform(input: Input) -> Output {
@@ -29,12 +29,11 @@ class MapViewModel: ViewModel, ViewModelType {
 
         let results = Observable
             .combineLatest(input.city.asObservable(), throttledRefresh)
-            .flatMapLatest { (city, region) -> Driver<[Resource]> in
+            .flatMapLatest { (city, region) in
                 self.request(city: city, region: region)
-                    .asDriver(onErrorJustReturn: [])
         }
         results.bind(to: resources).disposed(by: rx.disposeBag)
-        return Output(resources: resources.asDriver())
+        return Output(resources: resources)
     }
 
     func request(city: City, region: Region) -> Observable<[Resource]> {

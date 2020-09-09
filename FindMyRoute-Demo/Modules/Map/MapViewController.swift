@@ -26,12 +26,7 @@ class MapViewController: ViewController {
         return BehaviorRelay(value: Config.initialCity).asDriver()
     }()
     let region = PublishSubject<Region>()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    let resources = BehaviorRelay<[Resource]>(value: [])
 
     override func makeUI() {
         super.makeUI()
@@ -53,19 +48,20 @@ class MapViewController: ViewController {
         let input = MapViewModel.Input(city: city, refresh: region.asObservable())
         let output = viewModel.transform(input: input)
 
-        // mapView.rx.myLocation.filterNil().take(1).bind(onNext: { [weak self] (location) in
-        //     self?.updateCameraPosition(coordinate: location.coordinate, animate: false)
-        // }).disposed(by: rx.disposeBag)
-
-        mapView.rx.idleAt.bind(onNext: { [weak self](_) in
-            self?.refreshResources()
-        }).disposed(by: rx.disposeBag)
+        mapView.rx.idleAt.map { [weak self] (_) -> Region? in
+            guard let self = self else { return nil }
+            let visibleRegion = self.mapView.projection.visibleRegion()
+            return Region(lowerLeftLatLon: visibleRegion.nearLeft,
+                          upperRightLatLon: visibleRegion.farRight)
+        }.filterNil().bind(to: region).disposed(by: rx.disposeBag)
 
         input.city.asDriver().drive(onNext: { [weak self] (city) in
             self?.fitCameraBounds(city.position)
         }).disposed(by: rx.disposeBag)
 
-        output.resources.drive(onNext: { [weak self] (resources) in
+        output.resources.bind(to: resources).disposed(by: rx.disposeBag)
+
+        resources.asDriver(onErrorJustReturn: []).drive(onNext: { [weak self] (resources) in
             self?.updateResources(resources)
         }).disposed(by: rx.disposeBag)
     }
@@ -78,20 +74,6 @@ class MapViewController: ViewController {
         } else {
             mapView.moveCamera(update)
         }
-    }
-
-    func updateCameraPosition(coordinate: CLLocationCoordinate2D, animate: Bool = true) {
-        let camera = GMSCameraPosition(target: coordinate, zoom: mapView.camera.zoom)
-        if animate {
-            mapView.animate(to: camera)
-        } else {
-            mapView.camera = camera
-        }
-    }
-
-    func refreshResources() {
-        let visibleRegion = mapView.projection.visibleRegion()
-        region.onNext(Region(lowerLeftLatLon: visibleRegion.nearLeft, upperRightLatLon: visibleRegion.farRight))
     }
 
     func updateResources(_ resources: [Resource]) {

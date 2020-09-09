@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 import RxBlocking
-import MapKit
+import GoogleMaps
 @testable import FindMyRoute_Demo
 
 class MapViewControllerTests: QuickSpec {
@@ -32,10 +32,12 @@ class MapViewControllerTests: QuickSpec {
             it("sets up the UI") {
                 expect(view.mapView).toNot(beNil())
                 expect(view.mapView?.bounds) != .zero
+
+                expect { try view.resources.toBlocking().first() }.to(beEmpty())
             }
 
-            it("binds the view model") {
-
+            it("refreshes resources") {
+                expect { try view.resources.skip(1).toBlocking().first() }.notTo(beEmpty())
             }
         }
     }
