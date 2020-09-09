@@ -12,14 +12,12 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        xcode: ['/Applications/Xcode_11.3.app/Contents/Developer']
+        xcode: ['/Applications/Xcode_11.7.app/Contents/Developer']
     env:
       PROJECT: FindMyRoute-Demo.xcworkspace
       DERIVED_PATH: .build/derivedData
     steps:
     - uses: actions/checkout@v2
-    - name: Swift Build
-      run: swift build
     - name: Bundle Install
       run: bundle install
     - name: Pod Install
