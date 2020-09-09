@@ -30,6 +30,7 @@
 		9C4D76CA25091E7A00460851 /* MapUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C925091E7A00460851 /* MapUtilsTests.swift */; };
 		9C4D76CC2509335A00460851 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76CB2509335A00460851 /* MapViewControllerTests.swift */; };
 		9C4D76CE2509417800460851 /* CLLocationCoordinate2D+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76CD2509417800460851 /* CLLocationCoordinate2D+ExtensionsTests.swift */; };
+		9C4D76D02509510C00460851 /* Dictionary+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76CF2509510C00460851 /* Dictionary+ExtensionsTests.swift */; };
 		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
 		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
 		9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* MapViewController.swift */; };
@@ -111,6 +112,7 @@
 		9C4D76C925091E7A00460851 /* MapUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilsTests.swift; sourceTree = "<group>"; };
 		9C4D76CB2509335A00460851 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		9C4D76CD2509417800460851 /* CLLocationCoordinate2D+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		9C4D76CF2509510C00460851 /* Dictionary+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				9C4D76C22508C1D500460851 /* Encodable+ExtensionsTests.swift */,
 				9C4D76CD2509417800460851 /* CLLocationCoordinate2D+ExtensionsTests.swift */,
+				9C4D76CF2509510C00460851 /* Dictionary+ExtensionsTests.swift */,
 			);
 			path = ExtensionsTests;
 			sourceTree = "<group>";
@@ -871,6 +874,7 @@
 				9C4D76C32508C1D500460851 /* Encodable+ExtensionsTests.swift in Sources */,
 				9C4D76CA25091E7A00460851 /* MapUtilsTests.swift in Sources */,
 				9C4D76C02507EBD000460851 /* TestScheduler+Extensions.swift in Sources */,
+				9C4D76D02509510C00460851 /* Dictionary+ExtensionsTests.swift in Sources */,
 				9C4D76B72507C78D00460851 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
