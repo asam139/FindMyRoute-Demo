@@ -6,9 +6,6 @@
 //  Copyright © 2020 Saul Moreno Abril. All rights reserved.
 //
 
-import XCTest
-
-import XCTest
 import Quick
 import Nimble
 import Codextended
