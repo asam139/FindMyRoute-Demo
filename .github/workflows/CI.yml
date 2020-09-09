@@ -28,7 +28,7 @@ jobs:
         brew outdated xctool || brew upgrade xctool
     - name: Test iOS
       run: |
-        xcodebuild clean build test -project $PROJECT -scheme $SCHEME -destination "$DESTINATION" -derivedDataPath $DERIVED_PATH | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
+        xcodebuild clean build test -workspace $PROJECT -scheme $SCHEME -destination "$DESTINATION" -derivedDataPath $DERIVED_PATH | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
         bash <(curl -s https://codecov.io/bash) -cF ios -J 'SwifterSwiftUI' -D $DERIVED_PATH
       env:
           DEVELOPER_DIR: ${{ matrix.xcode }}
