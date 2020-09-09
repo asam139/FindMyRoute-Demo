@@ -28,6 +28,7 @@
 		9C4D76C32508C1D500460851 /* Encodable+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C22508C1D500460851 /* Encodable+ExtensionsTests.swift */; };
 		9C4D76C82509130500460851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C72509130500460851 /* ViewController.swift */; };
 		9C4D76CA25091E7A00460851 /* MapUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C925091E7A00460851 /* MapUtilsTests.swift */; };
+		9C4D76CC2509335A00460851 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76CB2509335A00460851 /* MapViewControllerTests.swift */; };
 		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
 		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
 		9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* MapViewController.swift */; };
@@ -107,6 +108,7 @@
 		9C4D76C22508C1D500460851 /* Encodable+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		9C4D76C72509130500460851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C4D76C925091E7A00460851 /* MapUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilsTests.swift; sourceTree = "<group>"; };
+		9C4D76CB2509335A00460851 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				9C4D76B62507C78D00460851 /* MapViewModelTests.swift */,
+				9C4D76CB2509335A00460851 /* MapViewControllerTests.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -858,6 +861,7 @@
 				9C4D76B02506BF2700460851 /* MopedTests.swift in Sources */,
 				9C4D76A32506B5E900460851 /* CityTests.swift in Sources */,
 				9C4D76AE2506BE7900460851 /* ElectricCarTests.swift in Sources */,
+				9C4D76CC2509335A00460851 /* MapViewControllerTests.swift in Sources */,
 				9C4D76AB2506BE0500460851 /* BikeStopTests.swift in Sources */,
 				9C4D76A62506BAB200460851 /* RegionTests.swift in Sources */,
 				9C4D76C32508C1D500460851 /* Encodable+ExtensionsTests.swift in Sources */,
