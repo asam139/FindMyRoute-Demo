@@ -40,7 +40,7 @@ class MapViewModelTests: QuickSpec {
             viewModel = nil
         }
 
-        describe("map view from city") {
+        describe("A map view model") {
             it("starts empty") {
                 expect { try output.resources.toBlocking().first() }.to(beEmpty())
             }
@@ -49,10 +49,6 @@ class MapViewModelTests: QuickSpec {
                 it("new resources appear") {
                     refresh.onNext(Region(lowerLeftLatLon: CLLocationCoordinate2D(latitude: -9, longitude: 40),
                                           upperRightLatLon: CLLocationCoordinate2D(latitude: -10, longitude: 41)))
-                    output.resources.drive(onNext: { (resources) in
-                        print(resources)
-                    }).disposed(by: self.rx.disposeBag)
-
                     expect { try output.resources.toBlocking().first() }.toNot(beEmpty())
                 }
             }

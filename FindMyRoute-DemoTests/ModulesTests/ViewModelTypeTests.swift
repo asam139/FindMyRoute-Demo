@@ -31,7 +31,7 @@ class ViewModelTypeTests: QuickSpec {
             viewModel = nil
         }
 
-        describe("a view model") {
+        describe("A view model") {
             it("stores server errors") {
                 let error = CocoaError.init(.userCancelled)
 

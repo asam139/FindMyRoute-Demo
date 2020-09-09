@@ -11,7 +11,7 @@ import MapKit
 import GoogleMaps
 
 class MapUtils {
-    static func translateCoordinate(coordinate: CLLocationCoordinate2D, latMeters: CLLocationDistance, lonMeters: CLLocationDistance) -> (CLLocationCoordinate2D) {
+    static func translateCoordinate(_ coordinate: CLLocationCoordinate2D, latMeters: CLLocationDistance, lonMeters: CLLocationDistance) -> (CLLocationCoordinate2D) {
         var newCoord = coordinate
 
         let tempRegion = MKCoordinateRegion(center: coordinate,
@@ -25,12 +25,10 @@ class MapUtils {
         return newCoord
     }
 
-    static func fitCameraBounds(_ coordinate: CLLocationCoordinate2D,
-                                radius: CLLocationDistance = 50,
-                                padding: CGFloat = 5) -> GMSCameraUpdate {
+    static func fitCameraBounds(coordinate: CLLocationCoordinate2D,
+                                radius: CLLocationDistance = 50) -> GMSCoordinateBounds {
         let diameter = radius * 2
-        let range = MapUtils.translateCoordinate(coordinate: coordinate, latMeters: diameter, lonMeters: diameter)
-        let bounds = GMSCoordinateBounds(coordinate: coordinate, coordinate: range)
-        return GMSCameraUpdate.fit(bounds, withPadding: padding)
+        let range = MapUtils.translateCoordinate( coordinate, latMeters: diameter, lonMeters: diameter)
+        return GMSCoordinateBounds(coordinate: coordinate, coordinate: range)
     }
 }
