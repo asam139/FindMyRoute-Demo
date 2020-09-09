@@ -14,13 +14,20 @@ extension Encodable {
     func asParemeters() throws -> [String: Any] {
         let data = try JSONEncoder().encode(self)
         guard let dict = try Serialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-            throw NSError()
+            throw EncodingError.invalidValue(Self.self, EncodingError.Context.init(codingPath: [], debugDescription: ""))
         }
         return dict
     }
 
     var parameters: [String: Any] {
-        guard let data = try? JSONEncoder().encode(self) else { return [:] }
-        return (try? Serialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] ?? [:]
+        guard let data = try? JSONEncoder().encode(self) else {
+            return [:]
+        }
+
+        guard let p = (try? Serialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any] else {
+            return [:]
+        }
+
+        return p
     }
 }
