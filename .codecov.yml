@@ -1,0 +1,17 @@
+codecov:
+  token: d0b82b3f-ad92-4b38-925d-78c0de94026e
+
+coverage:
+  precision: 2
+  round: down
+  range: 70...100
+
+  status:
+    project: true
+    patch: true
+    changes: true
+
+  ignore:
+    - "FindMyRoute-Demo/Resources/**/*"
+    - "FindMyRoute-DemoTests/**/*"
+    - "FindMyRoute-DemoUITests/**/*"

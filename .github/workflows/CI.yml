@@ -1,0 +1,39 @@
+name: SwifterSwiftUI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Tests
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        xcode: ['/Applications/Xcode_11.7.app/Contents/Developer']
+    env:
+      PROJECT: FindMyRoute-Demo.xcworkspace
+      DERIVED_PATH: .build/derivedData
+    steps:
+    - uses: actions/checkout@v2
+    - name: Swift Build
+      run: swift build
+    - name: Bundle Install
+      run: bundle install
+    - name: Bundle Install
+      run: bundle exec pod install
+    - name: Brew Upgrade
+      run: |
+        brew update
+        brew outdated xctool || brew upgrade xctool
+    - name: Test iOS
+      run: |
+        xcodebuild clean build test -project $PROJECT -scheme $SCHEME -destination "$DESTINATION" -derivedDataPath $DERIVED_PATH | XCPRETTY_JSON_FILE_OUTPUT="xcodebuild-ios.json" xcpretty -f `xcpretty-json-formatter`
+        bash <(curl -s https://codecov.io/bash) -cF ios -J 'SwifterSwiftUI' -D $DERIVED_PATH
+      env:
+          DEVELOPER_DIR: ${{ matrix.xcode }}
+          SCHEME: FindMyRoute-DemoTests
+          DESTINATION: platform=iOS Simulator,name=iPhone 11
+
