@@ -26,6 +26,7 @@
 		9C4D76BD2507DE3400460851 /* ViewModelTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76BC2507DE3400460851 /* ViewModelTypeTests.swift */; };
 		9C4D76C02507EBD000460851 /* TestScheduler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76BF2507EBD000460851 /* TestScheduler+Extensions.swift */; };
 		9C4D76C32508C1D500460851 /* Encodable+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C22508C1D500460851 /* Encodable+ExtensionsTests.swift */; };
+		9C4D76C82509130500460851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4D76C72509130500460851 /* ViewController.swift */; };
 		9CAF451624FEB9310018D8AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451524FEB9310018D8AB /* AppDelegate.swift */; };
 		9CAF451824FEB9310018D8AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451724FEB9310018D8AB /* SceneDelegate.swift */; };
 		9CAF451A24FEB9310018D8AB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAF451924FEB9310018D8AB /* MapViewController.swift */; };
@@ -103,6 +104,7 @@
 		9C4D76BC2507DE3400460851 /* ViewModelTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeTests.swift; sourceTree = "<group>"; };
 		9C4D76BF2507EBD000460851 /* TestScheduler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+Extensions.swift"; sourceTree = "<group>"; };
 		9C4D76C22508C1D500460851 /* Encodable+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		9C4D76C72509130500460851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CAF451224FEB9310018D8AB /* FindMyRoute-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FindMyRoute-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CAF451524FEB9310018D8AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CAF451724FEB9310018D8AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +276,21 @@
 			path = UtilsTests;
 			sourceTree = "<group>";
 		};
+		9C4D76C5250912E100460851 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9C4D76C72509130500460851 /* ViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9C4D76C6250912EB00460851 /* ComponentsTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ComponentsTests;
+			sourceTree = "<group>";
+		};
 		9CAF450924FEB9310018D8AB = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +322,7 @@
 				9CBE3A1E24FFEF0D00546C63 /* Networking */,
 				9CBE3A2424FFFB3100546C63 /* Models */,
 				9CBE3A3225000F4600546C63 /* Modules */,
+				9C4D76C5250912E100460851 /* Components */,
 				9CF09060250176170075278D /* Extensions */,
 				9C00DD2E25016F1F00C2A5C5 /* Utils */,
 				9CAF451B24FEB9310018D8AB /* Main.storyboard */,
@@ -322,6 +340,7 @@
 				9C4D76B82507D66500460851 /* ManagersTests */,
 				9CF0C96E2506860800D161EF /* ModelsTests */,
 				9C4D76B52507C73700460851 /* ModulesTests */,
+				9C4D76C6250912EB00460851 /* ComponentsTests */,
 				9C4D76C12508C19F00460851 /* ExtensionsTests */,
 				9C4D76C42508CB7D00460851 /* UtilsTests */,
 				9CAF452E24FEB9320018D8AB /* Info.plist */,
@@ -792,6 +811,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4D76C82509130500460851 /* ViewController.swift in Sources */,
 				9CBE3A2A24FFFDC400546C63 /* OnlineProvider.swift in Sources */,
 				9CF0C9742506867600D161EF /* ElectricCar.swift in Sources */,
 				9CF0C9692502AF5100D161EF /* ImagesManager.swift in Sources */,

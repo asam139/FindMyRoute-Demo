@@ -16,11 +16,7 @@ import RxGoogleMaps
 import SnapKit
 import NSObject_Rx
 
-class MapViewController: UIViewController {
-
-    var viewModel: MapViewModel!
-    var navigator: Navigator!
-
+class MapViewController: ViewController {
     @IBOutlet weak var mapView: GMSMapView!
     let defaultRadius: CLLocationDistance = 250 // meters
     let defaultPadding: CGFloat = 5
@@ -31,23 +27,15 @@ class MapViewController: UIViewController {
     }()
     let region = PublishSubject<Region>()
 
-    init(viewModel: MapViewModel, navigator: Navigator) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(nibName: nil, bundle: nil)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        makeUI()
-        bindViewModel()
+        // Do any additional setup after loading the view.
     }
 
-    func makeUI() {
+    override func makeUI() {
+        super.makeUI()
+
         let mapView = GMSMapView(frame: self.view.frame)
         mapView.isMyLocationEnabled = true
 
@@ -58,8 +46,9 @@ class MapViewController: UIViewController {
         self.mapView = mapView
     }
 
-    func bindViewModel() {
-        guard let viewModel = viewModel else { return }
+    override func bindViewModel() {
+        super.bindViewModel()
+        guard let viewModel = viewModel as? MapViewModel else { return }
 
         let input = MapViewModel.Input(city: city, refresh: region.asObservable())
         let output = viewModel.transform(input: input)
