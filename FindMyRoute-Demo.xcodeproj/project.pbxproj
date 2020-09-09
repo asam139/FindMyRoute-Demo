@@ -224,21 +224,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9C4D76B52507C73700460851 /* Modules */ = {
+		9C4D76B52507C73700460851 /* ModulesTests */ = {
 			isa = PBXGroup;
 			children = (
 				9C4D76BB2507DE1300460851 /* Map */,
 				9C4D76BC2507DE3400460851 /* ViewModelTypeTests.swift */,
 			);
-			path = Modules;
+			path = ModulesTests;
 			sourceTree = "<group>";
 		};
-		9C4D76B82507D66500460851 /* Managers */ = {
+		9C4D76B82507D66500460851 /* ManagersTests */ = {
 			isa = PBXGroup;
 			children = (
 				9C4D76B92507D68300460851 /* ImagesManagerTests.swift */,
 			);
-			path = Managers;
+			path = ManagersTests;
 			sourceTree = "<group>";
 		};
 		9C4D76BB2507DE1300460851 /* Map */ = {
@@ -255,6 +255,13 @@
 				9C4D76BF2507EBD000460851 /* TestScheduler+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C4D76C12508C19F00460851 /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtensionsTests;
 			sourceTree = "<group>";
 		};
 		9CAF450924FEB9310018D8AB = {
@@ -302,9 +309,10 @@
 			isa = PBXGroup;
 			children = (
 				9C4D76BE2507EBBA00460851 /* Extensions */,
-				9C4D76B82507D66500460851 /* Managers */,
-				9CF0C96E2506860800D161EF /* Models */,
-				9C4D76B52507C73700460851 /* Modules */,
+				9C4D76C12508C19F00460851 /* ExtensionsTests */,
+				9C4D76B82507D66500460851 /* ManagersTests */,
+				9CF0C96E2506860800D161EF /* ModelsTests */,
+				9C4D76B52507C73700460851 /* ModulesTests */,
 				9CAF452E24FEB9320018D8AB /* Info.plist */,
 			);
 			path = "FindMyRoute-DemoTests";
@@ -417,14 +425,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9CF0C96E2506860800D161EF /* Models */ = {
+		9CF0C96E2506860800D161EF /* ModelsTests */ = {
 			isa = PBXGroup;
 			children = (
 				9C4D76A22506B5E900460851 /* CityTests.swift */,
 				9C4D76A52506BAB200460851 /* RegionTests.swift */,
 				9C4D76A92506BC9500460851 /* Resources */,
 			);
-			path = Models;
+			path = ModelsTests;
 			sourceTree = "<group>";
 		};
 		9CF0C9772506868800D161EF /* Resources */ = {
